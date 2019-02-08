@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  TravelManager
-//
-//  Created by Marcin Marynowski on 18/11/2018.
-//  Copyright © 2018 Marcin Marynowski. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
