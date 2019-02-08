@@ -14,10 +14,10 @@
 		9135439B21A19E8500B929FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9135439A21A19E8500B929FC /* Assets.xcassets */; };
 		9135439E21A19E8500B929FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9135439C21A19E8500B929FC /* LaunchScreen.storyboard */; };
 		913543A921A19E8600B929FC /* TravelManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913543A821A19E8600B929FC /* TravelManagerTests.swift */; };
+		91AD5ECA220F100F001F1AAC /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5465D220DE282008BA297 /* UIViewController+Utils.swift */; };
 		91C54655220DDE70008BA297 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C54654220DDE70008BA297 /* MenuViewController.swift */; };
 		91C54657220DDE89008BA297 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C54656220DDE89008BA297 /* Menu.storyboard */; };
 		91C5465B220DE0BA008BA297 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C5465A220DE0BA008BA297 /* Map.storyboard */; };
-		91C5465E220DE282008BA297 /* UIViewController+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5465D220DE282008BA297 /* UIViewController+utils.swift */; };
 		91C54661220DE65B008BA297 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C54660220DE65B008BA297 /* Settings.storyboard */; };
 		91C54663220DE672008BA297 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C54662220DE672008BA297 /* SettingsViewController.swift */; };
 		91C54665220DE75C008BA297 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C54664220DE75C008BA297 /* MapViewController.swift */; };
@@ -53,7 +53,7 @@
 		91C54654220DDE70008BA297 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		91C54656220DDE89008BA297 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		91C5465A220DE0BA008BA297 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
-		91C5465D220DE282008BA297 /* UIViewController+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+utils.swift"; sourceTree = "<group>"; };
+		91C5465D220DE282008BA297 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		91C54660220DE65B008BA297 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		91C54662220DE672008BA297 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		91C54664220DE75C008BA297 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 		91C5465C220DE264008BA297 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				91C5465D220DE282008BA297 /* UIViewController+utils.swift */,
+				91C5465D220DE282008BA297 /* UIViewController+Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -375,9 +375,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91C5465E220DE282008BA297 /* UIViewController+utils.swift in Sources */,
 				91C54665220DE75C008BA297 /* MapViewController.swift in Sources */,
 				9135439621A19E8400B929FC /* MainViewController.swift in Sources */,
+				91AD5ECA220F100F001F1AAC /* UIViewController+Utils.swift in Sources */,
 				91C54655220DDE70008BA297 /* MenuViewController.swift in Sources */,
 				91C54663220DE672008BA297 /* SettingsViewController.swift in Sources */,
 				9135439421A19E8400B929FC /* AppDelegate.swift in Sources */,
