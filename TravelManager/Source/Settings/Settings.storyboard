@@ -20,11 +20,14 @@
                         <color key="backgroundColor" red="0.62510861145393404" green="1" blue="0.47252348059426552" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="vYe-uO-M4I"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="Zfq-XC-K5m"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="Zfq-XC-K5m"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Sv-uM-UaL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="settings" width="30" height="30"/>
+    </resources>
 </document>
