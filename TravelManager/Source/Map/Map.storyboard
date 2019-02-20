@@ -13,7 +13,7 @@
         <!--Map-->
         <scene sceneID="Oib-uX-Tqs">
             <objects>
-                <viewController id="wdX-Pt-4Lb" sceneMemberID="viewController">
+                <viewController id="wdX-Pt-4Lb" customClass="MapViewController" customModule="TravelManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gMO-Nk-6ha">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
