@@ -13,15 +13,49 @@
         <!--Settings-->
         <scene sceneID="hyq-Dl-gM6">
             <objects>
-                <viewController id="F4n-xW-fGH" sceneMemberID="viewController">
+                <viewController id="F4n-xW-fGH" customClass="SettingsViewController" customModule="TravelManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MOh-Pw-3ee">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.62510861145393404" green="1" blue="0.47252348059426552" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jqj-bN-RTX">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="3hi-XC-9LZ">
+                                    <rect key="frame" x="0.0" y="72" width="375" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="defaultSettingsCell" id="QHP-om-iXf">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QHP-om-iXf" id="BZE-Q1-ksM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="F4n-xW-fGH" id="XmK-uY-Hm2"/>
+                                    <outlet property="delegate" destination="F4n-xW-fGH" id="the-wJ-VHO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vYe-uO-M4I" firstAttribute="trailing" secondItem="Jqj-bN-RTX" secondAttribute="trailing" id="5LS-sT-0yA"/>
+                            <constraint firstItem="vYe-uO-M4I" firstAttribute="bottom" secondItem="Jqj-bN-RTX" secondAttribute="bottom" id="JDy-6q-z55"/>
+                            <constraint firstItem="Jqj-bN-RTX" firstAttribute="leading" secondItem="vYe-uO-M4I" secondAttribute="leading" id="VAa-Yk-l2I"/>
+                            <constraint firstItem="Jqj-bN-RTX" firstAttribute="top" secondItem="vYe-uO-M4I" secondAttribute="top" id="fWo-Vq-pYI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vYe-uO-M4I"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="Zfq-XC-K5m"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="Jqj-bN-RTX" id="QGg-hE-vN4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Sv-uM-UaL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
