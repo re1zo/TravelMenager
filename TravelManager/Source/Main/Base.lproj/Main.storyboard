@@ -34,17 +34,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="3Yu-4H-END"/>
                     <connections>
-                        <segue destination="3bb-l3-cUW" kind="show" identifier="showMenu" id="swC-WH-i8h"/>
+                        <segue destination="3bb-l3-cUW" kind="show" identifier="showSignIn" id="swC-WH-i8h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="992.79999999999995" y="362.96851574212894"/>
         </scene>
-        <!--Menu-->
+        <!--SignIn-->
         <scene sceneID="wWR-7C-GHe">
             <objects>
-                <viewControllerPlaceholder storyboardName="Menu" id="3bb-l3-cUW" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="SignIn" id="3bb-l3-cUW" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F9f-36-QWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1715" y="363"/>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dqi-H3-ad0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="0ho-tN-B6S">
+            <objects>
+                <viewController id="Dqi-H3-ad0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qar-oP-elg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7fw-56-plh" userLabel="Login Text Field">
+                                <rect key="frame" x="25" y="200" width="325" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aqV-d1-hP5" userLabel="Password Text Field">
+                                <rect key="frame" x="25" y="255" width="325" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgD-qe-9MK">
+                                <rect key="frame" x="25" y="310" width="325" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.9586031089996786" blue="0.47254820732240033" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="J7g-3n-yNz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Sign In"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="maT-sE-xk0" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rgD-qe-9MK" secondAttribute="bottom" id="Bst-ne-aaL"/>
+                            <constraint firstItem="rgD-qe-9MK" firstAttribute="leading" secondItem="maT-sE-xk0" secondAttribute="leading" constant="25" id="GbR-QY-wYy"/>
+                            <constraint firstItem="7fw-56-plh" firstAttribute="leading" secondItem="maT-sE-xk0" secondAttribute="leading" constant="25" id="RgL-wq-NiV"/>
+                            <constraint firstItem="7fw-56-plh" firstAttribute="top" secondItem="maT-sE-xk0" secondAttribute="top" constant="180" id="XqE-8N-fbH"/>
+                            <constraint firstItem="maT-sE-xk0" firstAttribute="trailing" secondItem="rgD-qe-9MK" secondAttribute="trailing" constant="25" id="YtH-Ue-o1c"/>
+                            <constraint firstItem="aqV-d1-hP5" firstAttribute="top" secondItem="7fw-56-plh" secondAttribute="bottom" constant="25" id="cSg-Tl-u3X"/>
+                            <constraint firstItem="maT-sE-xk0" firstAttribute="trailing" secondItem="7fw-56-plh" secondAttribute="trailing" constant="25" id="ll3-f5-3j6"/>
+                            <constraint firstItem="aqV-d1-hP5" firstAttribute="leading" secondItem="maT-sE-xk0" secondAttribute="leading" constant="25" id="o27-F5-GSY"/>
+                            <constraint firstItem="rgD-qe-9MK" firstAttribute="top" secondItem="aqV-d1-hP5" secondAttribute="bottom" constant="25" id="vmP-5r-Mli"/>
+                            <constraint firstItem="maT-sE-xk0" firstAttribute="trailing" secondItem="aqV-d1-hP5" secondAttribute="trailing" constant="25" id="yfi-OE-rRS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="maT-sE-xk0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IwN-Ca-r0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="223" y="80"/>
+        </scene>
+    </scenes>
+</document>
