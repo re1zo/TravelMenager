@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4C82D6AA20BA811ABC0629A1 /* libPods-TravelManagerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30427454E3548AF7727AAAB2 /* libPods-TravelManagerTests.a */; };
+		9116B4E1221EEA3900DA5466 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9116B4E0221EEA3900DA5466 /* SettingsItem.swift */; };
+		9116B4E4221EEB4900DA5466 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9116B4E3221EEB4900DA5466 /* SettingsTableViewCell.swift */; };
 		9135439421A19E8400B929FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135439321A19E8400B929FC /* AppDelegate.swift */; };
 		9135439621A19E8400B929FC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135439521A19E8400B929FC /* MainViewController.swift */; };
 		9135439921A19E8400B929FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9135439721A19E8400B929FC /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 		3C1ABE3F8DAFADC213A8C1A3 /* libPods-TravelManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TravelManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C73AD16BFD63F8BB8327840 /* Pods-TravelManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelManagerTests/Pods-TravelManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8E135847C0A92ED67E4885C8 /* Pods-TravelManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelManager/Pods-TravelManager.debug.xcconfig"; sourceTree = "<group>"; };
+		9116B4E0221EEA3900DA5466 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
+		9116B4E3221EEB4900DA5466 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		9135439021A19E8400B929FC /* TravelManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9135439321A19E8400B929FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9135439521A19E8400B929FC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,22 @@
 				30427454E3548AF7727AAAB2 /* libPods-TravelManagerTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9116B4DF221EEA2200DA5466 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				9116B4E0221EEA3900DA5466 /* SettingsItem.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		9116B4E2221EEB2300DA5466 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9116B4E3221EEB4900DA5466 /* SettingsTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9135438721A19E8400B929FC = {
@@ -222,6 +242,8 @@
 		91C5465F220DE61D008BA297 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				9116B4E2221EEB2300DA5466 /* Cells */,
+				9116B4DF221EEA2200DA5466 /* Enums */,
 				91C54660220DE65B008BA297 /* Settings.storyboard */,
 				91C54662220DE672008BA297 /* SettingsViewController.swift */,
 			);
@@ -422,6 +444,8 @@
 				91AFDE16221EDDE9001B046A /* SignInViewController.swift in Sources */,
 				916FBE5E221DB97300F43F01 /* Settings.swift in Sources */,
 				91C54663220DE672008BA297 /* SettingsViewController.swift in Sources */,
+				9116B4E1221EEA3900DA5466 /* SettingsItem.swift in Sources */,
+				9116B4E4221EEB4900DA5466 /* SettingsTableViewCell.swift in Sources */,
 				9135439421A19E8400B929FC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

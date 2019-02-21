@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="0ho-tN-B6S">
             <objects>
-                <viewController id="Dqi-H3-ad0" sceneMemberID="viewController">
+                <viewController id="Dqi-H3-ad0" customClass="SignInViewController" customModule="TravelManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qar-oP-elg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,6 +38,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="signInButtonClicked" destination="Dqi-H3-ad0" eventType="touchDown" id="gKs-Mu-EkR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -55,10 +58,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="maT-sE-xk0"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordButton" destination="aqV-d1-hP5" id="Ctk-Pd-d7E"/>
+                        <outlet property="usernameButton" destination="7fw-56-plh" id="jy5-wx-MMd"/>
+                        <segue destination="i5H-HM-DvB" kind="show" identifier="showMenu" id="MlC-rO-GfA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IwN-Ca-r0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="223" y="80"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="Tps-jk-Z7Y">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Menu" id="i5H-HM-DvB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jSi-xT-ykC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911" y="79"/>
         </scene>
     </scenes>
 </document>

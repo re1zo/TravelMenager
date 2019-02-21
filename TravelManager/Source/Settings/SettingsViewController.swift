@@ -10,7 +10,7 @@ final class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "defaultSettingsCell")
+        tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: "defaultSettingsCell")
     }
 }
 
@@ -18,10 +18,24 @@ final class SettingsViewController: UIViewController {
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return SettingsItem.allCases.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "defaultSettingsCell") ?? UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "defaultSettingsCell") as? SettingsTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.textLabel?.text = SettingsItem.allCases[indexPath.row].rawValue
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        defer {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+        switch SettingsItem.allCases[indexPath.row] {
+        case .logout:
+            navigationController?.popToRootViewController(animated: true)
+        }
     }
 }
