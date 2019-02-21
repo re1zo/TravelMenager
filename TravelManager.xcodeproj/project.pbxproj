@@ -17,6 +17,7 @@
 		916FBE5B221DB90C00F43F01 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 916FBE5A221DB90C00F43F01 /* Settings.plist */; };
 		916FBE5E221DB97300F43F01 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916FBE5D221DB97300F43F01 /* Settings.swift */; };
 		91AD5ECA220F100F001F1AAC /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5465D220DE282008BA297 /* UIViewController+Utils.swift */; };
+		91AFDE10221ED926001B046A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91AFDE0F221ED926001B046A /* GoogleService-Info.plist */; };
 		91C54655220DDE70008BA297 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C54654220DDE70008BA297 /* MenuViewController.swift */; };
 		91C54657220DDE89008BA297 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C54656220DDE89008BA297 /* Menu.storyboard */; };
 		91C5465B220DE0BA008BA297 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C5465A220DE0BA008BA297 /* Map.storyboard */; };
@@ -54,6 +55,7 @@
 		913543AA21A19E8600B929FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		916FBE5A221DB90C00F43F01 /* Settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		916FBE5D221DB97300F43F01 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		91AFDE0F221ED926001B046A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91C54654220DDE70008BA297 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		91C54656220DDE89008BA297 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		91C5465A220DE0BA008BA297 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
@@ -131,6 +133,8 @@
 				9135439321A19E8400B929FC /* AppDelegate.swift */,
 				9135439A21A19E8500B929FC /* Assets.xcassets */,
 				9135439C21A19E8500B929FC /* LaunchScreen.storyboard */,
+				916FBE5A221DB90C00F43F01 /* Settings.plist */,
+				91AFDE0F221ED926001B046A /* GoogleService-Info.plist */,
 				9135439F21A19E8500B929FC /* Info.plist */,
 			);
 			path = TravelManager;
@@ -162,7 +166,6 @@
 				91C5465F220DE61D008BA297 /* Settings */,
 				91C5465C220DE264008BA297 /* Extensions */,
 				916FBE5C221DB95600F43F01 /* Tools */,
-				916FBE5A221DB90C00F43F01 /* Settings.plist */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9135439E21A19E8500B929FC /* LaunchScreen.storyboard in Resources */,
+				91AFDE10221ED926001B046A /* GoogleService-Info.plist in Resources */,
 				9135439B21A19E8500B929FC /* Assets.xcassets in Resources */,
 				91C5465B220DE0BA008BA297 /* Map.storyboard in Resources */,
 				91C54661220DE65B008BA297 /* Settings.storyboard in Resources */,
@@ -368,15 +372,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TravelManager/Pods-TravelManager-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
