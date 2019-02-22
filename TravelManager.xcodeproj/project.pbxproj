@@ -10,6 +10,8 @@
 		4C82D6AA20BA811ABC0629A1 /* libPods-TravelManagerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30427454E3548AF7727AAAB2 /* libPods-TravelManagerTests.a */; };
 		9116B4E1221EEA3900DA5466 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9116B4E0221EEA3900DA5466 /* SettingsItem.swift */; };
 		9116B4E4221EEB4900DA5466 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9116B4E3221EEB4900DA5466 /* SettingsTableViewCell.swift */; };
+		912AB054222037490079BA75 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912AB053222037490079BA75 /* SettingsViewModel.swift */; };
+		912AB0572220378B0079BA75 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912AB0562220378B0079BA75 /* User.swift */; };
 		9135439421A19E8400B929FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135439321A19E8400B929FC /* AppDelegate.swift */; };
 		9135439621A19E8400B929FC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135439521A19E8400B929FC /* MainViewController.swift */; };
 		9135439921A19E8400B929FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9135439721A19E8400B929FC /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		8E135847C0A92ED67E4885C8 /* Pods-TravelManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelManager/Pods-TravelManager.debug.xcconfig"; sourceTree = "<group>"; };
 		9116B4E0221EEA3900DA5466 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
 		9116B4E3221EEB4900DA5466 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		912AB053222037490079BA75 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		912AB0562220378B0079BA75 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9135439021A19E8400B929FC /* TravelManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9135439321A19E8400B929FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9135439521A19E8400B929FC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +134,43 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		912AB052222037340079BA75 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				912AB053222037490079BA75 /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		912AB0552220377A0079BA75 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				912AB0562220378B0079BA75 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		912AB058222037BA0079BA75 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9135439C21A19E8500B929FC /* LaunchScreen.storyboard */,
+				91C54651220DDCAE008BA297 /* Main */,
+				91AFDE11221EDDAD001B046A /* SignIn */,
+				91C54653220DDE1C008BA297 /* Menu */,
+				91C54652220DDCCF008BA297 /* Map */,
+				91C5465F220DE61D008BA297 /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		912AB059222038D40079BA75 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				91C54662220DE672008BA297 /* SettingsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		9135438721A19E8400B929FC = {
 			isa = PBXGroup;
 			children = (
@@ -154,9 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				91C54650220DDCAE008BA297 /* Source */,
-				9135439321A19E8400B929FC /* AppDelegate.swift */,
 				9135439A21A19E8500B929FC /* Assets.xcassets */,
-				9135439C21A19E8500B929FC /* LaunchScreen.storyboard */,
 				916FBE5A221DB90C00F43F01 /* Settings.plist */,
 				91AFDE0F221ED926001B046A /* GoogleService-Info.plist */,
 				9135439F21A19E8500B929FC /* Info.plist */,
@@ -193,13 +232,11 @@
 		91C54650220DDCAE008BA297 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				91C54651220DDCAE008BA297 /* Main */,
-				91AFDE11221EDDAD001B046A /* SignIn */,
-				91C54653220DDE1C008BA297 /* Menu */,
-				91C54652220DDCCF008BA297 /* Map */,
-				91C5465F220DE61D008BA297 /* Settings */,
-				91C5465C220DE264008BA297 /* Extensions */,
+				9135439321A19E8400B929FC /* AppDelegate.swift */,
+				912AB058222037BA0079BA75 /* Views */,
+				912AB0552220377A0079BA75 /* Models */,
 				916FBE5C221DB95600F43F01 /* Tools */,
+				91C5465C220DE264008BA297 /* Extensions */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -242,10 +279,11 @@
 		91C5465F220DE61D008BA297 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				912AB059222038D40079BA75 /* ViewControllers */,
+				912AB052222037340079BA75 /* ViewModels */,
 				9116B4E2221EEB2300DA5466 /* Cells */,
 				9116B4DF221EEA2200DA5466 /* Enums */,
 				91C54660220DE65B008BA297 /* Settings.storyboard */,
-				91C54662220DE672008BA297 /* SettingsViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -445,6 +483,8 @@
 				916FBE5E221DB97300F43F01 /* Settings.swift in Sources */,
 				91C54663220DE672008BA297 /* SettingsViewController.swift in Sources */,
 				9116B4E1221EEA3900DA5466 /* SettingsItem.swift in Sources */,
+				912AB0572220378B0079BA75 /* User.swift in Sources */,
+				912AB054222037490079BA75 /* SettingsViewModel.swift in Sources */,
 				9116B4E4221EEB4900DA5466 /* SettingsTableViewCell.swift in Sources */,
 				9135439421A19E8400B929FC /* AppDelegate.swift in Sources */,
 			);

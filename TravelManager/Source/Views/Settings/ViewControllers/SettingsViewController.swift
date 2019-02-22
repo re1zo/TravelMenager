@@ -38,4 +38,5 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             navigationController?.popToRootViewController(animated: true)
         }
     }
+
 }
