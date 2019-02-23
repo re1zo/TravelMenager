@@ -1,16 +1,17 @@
 import UIKit
 import GoogleMaps
 
-class MapViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+final class GoogleMapsView: UIView {
+    
+    
+    override func awakeFromNib() {
+        createGoogleMapsView()
     }
     
-    override func loadView() {
+    private func createGoogleMapsView() {
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        view = mapView
+        addSubview(mapView)
         
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
