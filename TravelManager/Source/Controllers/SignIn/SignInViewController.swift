@@ -22,24 +22,24 @@ final class SignInViewController: UIViewController {
     
 
     func signIn(username: String, password: String) {
-        Auth.auth().signIn(withEmail: username, password: password) { [weak self] user, error in
-            debugPrint(user)
-            debugPrint(error)
-            guard let strongSelf = self,
-                let user = user
-            else {
-                return
-            }
-            strongSelf.performSegue(withIdentifier: "showMenu")
-        }
-        
-//        Auth.auth().signInAnonymously() { [weak self] authResult, error in
+//        Auth.auth().signIn(withEmail: username, password: password) { [weak self] user, error in
+//            debugPrint(user)
+//            debugPrint(error)
 //            guard let strongSelf = self,
-//                let authResult = authResult
+//                let user = user
 //            else {
 //                return
 //            }
 //            strongSelf.performSegue(withIdentifier: "showMenu")
 //        }
+        
+        Auth.auth().signInAnonymously() { [weak self] authResult, error in
+            guard let strongSelf = self,
+                let authResult = authResult
+            else {
+                return
+            }
+            strongSelf.performSegue(withIdentifier: "showMenu")
+        }
     }
 }

@@ -4,7 +4,6 @@ final class SettingsViewController: UIViewController {
     
     // MARK: - Outlets
     
-    
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var usernameLabel: UILabel!
 
@@ -12,6 +11,7 @@ final class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameLabel.text = "test".localized()
         tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: "defaultSettingsCell")
     }
 }

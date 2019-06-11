@@ -89,8 +89,6 @@
 		91C54660220DE65B008BA297 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		91C54662220DE672008BA297 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		91C54664220DE75C008BA297 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		91EB4A7222AFD8780022D8F9 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		91EB4A7322AFD8780022D8F9 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
 		91EB4A7722AFD91B0022D8F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Localization.plist; sourceTree = "<group>"; };
 		91EB4A7922AFD91F0022D8F9 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = pl; path = pl.lproj/Localization.plist; sourceTree = "<group>"; };
 		91EB4A7A22AFD9370022D8F9 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
@@ -568,7 +566,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				9135439821A19E8400B929FC /* Base */,
-				91EB4A7322AFD8780022D8F9 /* pl */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -577,7 +574,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				9135439D21A19E8500B929FC /* Base */,
-				91EB4A7222AFD8780022D8F9 /* pl */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
