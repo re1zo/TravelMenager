@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dqi-H3-ad0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dqi-H3-ad0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,17 +42,27 @@
                                     <action selector="signInButtonClicked" destination="Dqi-H3-ad0" eventType="touchDown" id="gKs-Mu-EkR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkl-u7-rUH">
+                                <rect key="frame" x="165" y="395" width="45" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <segue destination="kRz-CJ-GUD" kind="show" id="CBM-B0-S00"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="maT-sE-xk0" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rgD-qe-9MK" secondAttribute="bottom" id="Bst-ne-aaL"/>
                             <constraint firstItem="rgD-qe-9MK" firstAttribute="leading" secondItem="maT-sE-xk0" secondAttribute="leading" constant="25" id="GbR-QY-wYy"/>
+                            <constraint firstItem="hkl-u7-rUH" firstAttribute="top" secondItem="rgD-qe-9MK" secondAttribute="bottom" constant="25" id="N0F-I3-SSV"/>
                             <constraint firstItem="7fw-56-plh" firstAttribute="leading" secondItem="maT-sE-xk0" secondAttribute="leading" constant="25" id="RgL-wq-NiV"/>
                             <constraint firstItem="7fw-56-plh" firstAttribute="top" secondItem="maT-sE-xk0" secondAttribute="top" constant="180" id="XqE-8N-fbH"/>
                             <constraint firstItem="maT-sE-xk0" firstAttribute="trailing" secondItem="rgD-qe-9MK" secondAttribute="trailing" constant="25" id="YtH-Ue-o1c"/>
                             <constraint firstItem="aqV-d1-hP5" firstAttribute="top" secondItem="7fw-56-plh" secondAttribute="bottom" constant="25" id="cSg-Tl-u3X"/>
                             <constraint firstItem="maT-sE-xk0" firstAttribute="trailing" secondItem="7fw-56-plh" secondAttribute="trailing" constant="25" id="ll3-f5-3j6"/>
                             <constraint firstItem="aqV-d1-hP5" firstAttribute="leading" secondItem="maT-sE-xk0" secondAttribute="leading" constant="25" id="o27-F5-GSY"/>
+                            <constraint firstItem="hkl-u7-rUH" firstAttribute="centerX" secondItem="Qar-oP-elg" secondAttribute="centerX" id="sAL-vN-Iiz"/>
                             <constraint firstItem="rgD-qe-9MK" firstAttribute="top" secondItem="aqV-d1-hP5" secondAttribute="bottom" constant="25" id="vmP-5r-Mli"/>
                             <constraint firstItem="maT-sE-xk0" firstAttribute="trailing" secondItem="aqV-d1-hP5" secondAttribute="trailing" constant="25" id="yfi-OE-rRS"/>
                         </constraints>
@@ -74,7 +84,15 @@
                 <viewControllerPlaceholder storyboardName="Menu" id="i5H-HM-DvB" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSi-xT-ykC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911" y="79"/>
+            <point key="canvasLocation" x="880" y="58"/>
+        </scene>
+        <!--SignUp-->
+        <scene sceneID="zxc-9v-BKk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignUp" id="kRz-CJ-GUD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rzy-Tg-vUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888" y="103"/>
         </scene>
     </scenes>
 </document>

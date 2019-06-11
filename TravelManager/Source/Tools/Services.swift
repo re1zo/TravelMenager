@@ -1,7 +1,7 @@
 import Firebase
 import GoogleMaps
 
-final class Configure {
+final class Services {
 
     func configure() {
         FirebaseApp.configure()

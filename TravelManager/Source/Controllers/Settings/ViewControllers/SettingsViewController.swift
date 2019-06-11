@@ -2,9 +2,11 @@ import UIKit
 
 final class SettingsViewController: UIViewController {
     
-    // MARK: - Lifecycle
+    // MARK: - Outlets
     
-    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var usernameLabel: UILabel!
 
     // MARK: - Lifecycle
     
