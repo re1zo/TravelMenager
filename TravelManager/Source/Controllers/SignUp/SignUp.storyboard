@@ -32,12 +32,21 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3S8-1d-o9e">
                                 <rect key="frame" x="25" y="334" width="364" height="60"/>
-                                <color key="backgroundColor" red="1" green="0.95860310900000001" blue="0.47254820730000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.68235294117647061" green="0.74117647058823533" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="fMm-Vo-CpP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Regiester"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registerButtonClicked" destination="jiO-WN-HvZ" eventType="touchUpInside" id="mrv-H7-LgV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -54,6 +63,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bEA-w1-ieZ"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="M7b-LP-Tf4" id="Fsq-pE-vw5"/>
+                        <outlet property="registerButton" destination="3S8-1d-o9e" id="vA1-Cv-HeF"/>
+                        <outlet property="usernameTextField" destination="FS4-Rk-QoM" id="XNo-cP-4WM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4KR-i1-M4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -32,32 +32,47 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgD-qe-9MK">
                                 <rect key="frame" x="25" y="310" width="325" height="60"/>
-                                <color key="backgroundColor" red="1" green="0.9586031089996786" blue="0.47254820732240033" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.31372549019607843" green="0.31764705882352939" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="J7g-3n-yNz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Sign In"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signInButtonClicked" destination="Dqi-H3-ad0" eventType="touchDown" id="gKs-Mu-EkR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkl-u7-rUH">
-                                <rect key="frame" x="165" y="395" width="45" height="27"/>
+                                <rect key="frame" x="160.5" y="390" width="54" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Sign Up"/>
+                                <color key="tintColor" red="0.31372549020000001" green="0.31764705879999999" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Regiester">
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="kRz-CJ-GUD" kind="show" id="CBM-B0-S00"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awX-k5-m4k">
                                 <rect key="frame" x="25" y="582" width="325" height="60"/>
-                                <color key="backgroundColor" red="0.61349201490000005" green="0.62004854519999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.31372549020000001" green="0.31764705879999999" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="LaX-Rf-BDF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Sign In with test account"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signInButtonClicked" destination="Dqi-H3-ad0" eventType="touchDown" id="6GF-X4-JAs"/>
                                     <action selector="testAccountSignInButtonClicked" destination="Dqi-H3-ad0" eventType="touchUpInside" id="Tmo-1O-6qy"/>
@@ -71,7 +86,7 @@
                             <constraint firstItem="rgD-qe-9MK" firstAttribute="leading" secondItem="maT-sE-xk0" secondAttribute="leading" constant="25" id="GbR-QY-wYy"/>
                             <constraint firstItem="7fw-56-plh" firstAttribute="leading" secondItem="maT-sE-xk0" secondAttribute="leading" constant="25" id="RgL-wq-NiV"/>
                             <constraint firstItem="7fw-56-plh" firstAttribute="top" secondItem="maT-sE-xk0" secondAttribute="top" constant="180" id="XqE-8N-fbH"/>
-                            <constraint firstItem="hkl-u7-rUH" firstAttribute="top" secondItem="rgD-qe-9MK" secondAttribute="bottom" constant="25" id="YV8-lq-pNa"/>
+                            <constraint firstItem="hkl-u7-rUH" firstAttribute="top" secondItem="rgD-qe-9MK" secondAttribute="bottom" constant="20" id="YV8-lq-pNa"/>
                             <constraint firstItem="maT-sE-xk0" firstAttribute="trailing" secondItem="rgD-qe-9MK" secondAttribute="trailing" constant="25" id="YtH-Ue-o1c"/>
                             <constraint firstItem="maT-sE-xk0" firstAttribute="trailing" secondItem="awX-k5-m4k" secondAttribute="trailing" constant="25" id="b48-BV-VKw"/>
                             <constraint firstItem="aqV-d1-hP5" firstAttribute="top" secondItem="7fw-56-plh" secondAttribute="bottom" constant="25" id="cSg-Tl-u3X"/>
@@ -85,8 +100,10 @@
                         <viewLayoutGuide key="safeArea" id="maT-sE-xk0"/>
                     </view>
                     <connections>
-                        <outlet property="passwordButton" destination="aqV-d1-hP5" id="Ctk-Pd-d7E"/>
-                        <outlet property="usernameButton" destination="7fw-56-plh" id="jy5-wx-MMd"/>
+                        <outlet property="passwordTextField" destination="aqV-d1-hP5" id="Ctk-Pd-d7E"/>
+                        <outlet property="signInButton" destination="rgD-qe-9MK" id="fHn-93-Cka"/>
+                        <outlet property="testAccountSignInButton" destination="awX-k5-m4k" id="omV-CE-HV5"/>
+                        <outlet property="usernameTextField" destination="7fw-56-plh" id="jy5-wx-MMd"/>
                         <segue destination="i5H-HM-DvB" kind="show" identifier="showMenu" id="MlC-rO-GfA"/>
                     </connections>
                 </viewController>

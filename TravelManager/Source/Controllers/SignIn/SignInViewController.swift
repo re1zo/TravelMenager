@@ -5,23 +5,31 @@ final class SignInViewController: UIViewController {
    
     // MARK: - Outlets
     
-    @IBOutlet private weak var usernameButton: UITextField!
-    @IBOutlet private weak var passwordButton: UITextField!
+    @IBOutlet private weak var signInButton: UIButton! {
+        didSet {
+            signInButton.applyShadow()
+        }
+    }
+    
+    @IBOutlet private weak var testAccountSignInButton: UIButton! {
+        didSet {
+            testAccountSignInButton.applyShadow()
+        }
+    }
+    
+    @IBOutlet private weak var usernameTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
     
     // MARK: - Actions
     
     @IBAction private func signInButtonClicked() {
-        signIn(username: usernameButton.text ?? "", password: passwordButton.text ?? "")
+        signIn(username: usernameTextField.text ?? "", password: passwordTextField.text ?? "")
     }
     @IBAction private func testAccountSignInButtonClicked() {
         testAccountSignIn()
     }
     
-    // MARK: - Lifecycle
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    // MARK: Methods
 
     private func signIn(username: String, password: String) {
         Auth.auth().signIn(withEmail: username, password: password) { [weak self] user, error in
