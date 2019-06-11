@@ -50,19 +50,35 @@
                                     <segue destination="kRz-CJ-GUD" kind="show" id="CBM-B0-S00"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awX-k5-m4k">
+                                <rect key="frame" x="25" y="582" width="325" height="60"/>
+                                <color key="backgroundColor" red="0.61349201490000005" green="0.62004854519999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="LaX-Rf-BDF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Sign In with test account"/>
+                                <connections>
+                                    <action selector="signInButtonClicked" destination="Dqi-H3-ad0" eventType="touchDown" id="6GF-X4-JAs"/>
+                                    <action selector="testAccountSignInButtonClicked" destination="Dqi-H3-ad0" eventType="touchUpInside" id="Tmo-1O-6qy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="awX-k5-m4k" firstAttribute="leading" secondItem="maT-sE-xk0" secondAttribute="leading" constant="25" id="7nr-Xb-OPM"/>
                             <constraint firstItem="maT-sE-xk0" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rgD-qe-9MK" secondAttribute="bottom" id="Bst-ne-aaL"/>
                             <constraint firstItem="rgD-qe-9MK" firstAttribute="leading" secondItem="maT-sE-xk0" secondAttribute="leading" constant="25" id="GbR-QY-wYy"/>
-                            <constraint firstItem="hkl-u7-rUH" firstAttribute="top" secondItem="rgD-qe-9MK" secondAttribute="bottom" constant="25" id="N0F-I3-SSV"/>
                             <constraint firstItem="7fw-56-plh" firstAttribute="leading" secondItem="maT-sE-xk0" secondAttribute="leading" constant="25" id="RgL-wq-NiV"/>
                             <constraint firstItem="7fw-56-plh" firstAttribute="top" secondItem="maT-sE-xk0" secondAttribute="top" constant="180" id="XqE-8N-fbH"/>
+                            <constraint firstItem="hkl-u7-rUH" firstAttribute="top" secondItem="rgD-qe-9MK" secondAttribute="bottom" constant="25" id="YV8-lq-pNa"/>
                             <constraint firstItem="maT-sE-xk0" firstAttribute="trailing" secondItem="rgD-qe-9MK" secondAttribute="trailing" constant="25" id="YtH-Ue-o1c"/>
+                            <constraint firstItem="maT-sE-xk0" firstAttribute="trailing" secondItem="awX-k5-m4k" secondAttribute="trailing" constant="25" id="b48-BV-VKw"/>
                             <constraint firstItem="aqV-d1-hP5" firstAttribute="top" secondItem="7fw-56-plh" secondAttribute="bottom" constant="25" id="cSg-Tl-u3X"/>
                             <constraint firstItem="maT-sE-xk0" firstAttribute="trailing" secondItem="7fw-56-plh" secondAttribute="trailing" constant="25" id="ll3-f5-3j6"/>
                             <constraint firstItem="aqV-d1-hP5" firstAttribute="leading" secondItem="maT-sE-xk0" secondAttribute="leading" constant="25" id="o27-F5-GSY"/>
                             <constraint firstItem="hkl-u7-rUH" firstAttribute="centerX" secondItem="Qar-oP-elg" secondAttribute="centerX" id="sAL-vN-Iiz"/>
+                            <constraint firstItem="maT-sE-xk0" firstAttribute="bottom" secondItem="awX-k5-m4k" secondAttribute="bottom" constant="25" id="u65-CO-NbA"/>
                             <constraint firstItem="rgD-qe-9MK" firstAttribute="top" secondItem="aqV-d1-hP5" secondAttribute="bottom" constant="25" id="vmP-5r-Mli"/>
                             <constraint firstItem="maT-sE-xk0" firstAttribute="trailing" secondItem="aqV-d1-hP5" secondAttribute="trailing" constant="25" id="yfi-OE-rRS"/>
                         </constraints>

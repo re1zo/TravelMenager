@@ -1,4 +1,5 @@
 import UIKit
+import Firebase
 
 final class SettingsViewController: UIViewController {
     
@@ -11,7 +12,7 @@ final class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        usernameLabel.text = "test".localized()
+        usernameLabel.text = AppUser().current?.email ?? ""
         tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: "defaultSettingsCell")
     }
 }
@@ -37,6 +38,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         }
         switch SettingsItem.allCases[indexPath.row] {
         case .logout:
+            try? Auth.auth().signOut()
             navigationController?.popToRootViewController(animated: true)
         }
     }
