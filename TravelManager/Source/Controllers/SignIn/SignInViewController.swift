@@ -1,55 +1,34 @@
-import UIKit
+import RxCocoa
+import RxSwift
 import Firebase
 
 final class SignInViewController: UIViewController {
    
     // MARK: - Outlets
     
-    @IBOutlet private weak var signInButton: UIButton! {
-        didSet {
-            signInButton.applyShadow()
-        }
-    }
-    
-    @IBOutlet private weak var testAccountSignInButton: UIButton! {
-        didSet {
-            testAccountSignInButton.applyShadow()
-        }
-    }
-    
+    @IBOutlet private weak var signInButton: StandardStyledUIButton!
+    @IBOutlet private weak var testAccountSignInButton: StandardStyledUIButton!
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
-    
-    // MARK: - Actions
-    
-    @IBAction private func signInButtonClicked() {
-        signIn(username: usernameTextField.text ?? "", password: passwordTextField.text ?? "")
-    }
-    @IBAction private func testAccountSignInButtonClicked() {
-        testAccountSignIn()
-    }
-    
-    // MARK: Methods
 
+    // MARK: Variables
+    
+    private let bag = DisposeBag()
+    
+    // MARK: Life cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        signInButton.rx.tap.bind { self.signIn(username: self.usernameTextField.text ?? "", password: self.passwordTextField.text ?? "") }.disposed(by: bag)
+        testAccountSignInButton.rx.tap.bind { self.signIn(username: "ifenix@gazeta.pl", password: "Test1234") }.disposed(by: bag)
+    }
+    
     private func signIn(username: String, password: String) {
         Auth.auth().signIn(withEmail: username, password: password) { [weak self] user, error in
-            guard let strongSelf = self,
-                let user = user
-            else {
+            guard let strongSelf = self, let user = user else {
                 return
             }
-            
-            strongSelf.performSegue(withIdentifier: "showMenu")
-        }
-    }
-    
-    private func testAccountSignIn() {
-        Auth.auth().signInAnonymously() { [weak self] authResult, error in
-            guard let strongSelf = self,
-                let authResult = authResult
-            else {
-                    return
-            }
+
             strongSelf.performSegue(withIdentifier: "showMenu")
         }
     }

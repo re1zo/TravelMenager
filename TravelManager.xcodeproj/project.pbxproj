@@ -10,6 +10,7 @@
 		6914854DFA81B2800E879EE4 /* libPods-TravelManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1396B2776EE0506D574A6B /* libPods-TravelManager.a */; };
 		9116B4E1221EEA3900DA5466 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9116B4E0221EEA3900DA5466 /* SettingsItem.swift */; };
 		9116B4E4221EEB4900DA5466 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9116B4E3221EEB4900DA5466 /* SettingsTableViewCell.swift */; };
+		911D00072338E212000F076D /* StandardStyledUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D00062338E212000F076D /* StandardStyledUIButton.swift */; };
 		912AB054222037490079BA75 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912AB053222037490079BA75 /* SettingsViewModel.swift */; };
 		912AB05D2220412D0079BA75 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912AB05C2220412D0079BA75 /* UIButton+Style.swift */; };
 		9135439421A19E8400B929FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135439321A19E8400B929FC /* AppDelegate.swift */; };
@@ -60,6 +61,7 @@
 		8D1396B2776EE0506D574A6B /* libPods-TravelManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TravelManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9116B4E0221EEA3900DA5466 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
 		9116B4E3221EEB4900DA5466 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		911D00062338E212000F076D /* StandardStyledUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardStyledUIButton.swift; sourceTree = "<group>"; };
 		912AB053222037490079BA75 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		912AB05C2220412D0079BA75 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		9135439021A19E8400B929FC /* TravelManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +153,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		911D00052338E1CF000F076D /* Controlls */ = {
+			isa = PBXGroup;
+			children = (
+				911D00062338E212000F076D /* StandardStyledUIButton.swift */,
+			);
+			path = Controlls;
+			sourceTree = "<group>";
+		};
 		912AB052222037340079BA75 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +202,7 @@
 		912AB05A222040F20079BA75 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				911D00052338E1CF000F076D /* Controlls */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -401,6 +412,7 @@
 					};
 					913543A321A19E8600B929FC = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 						TestTargetID = 9135438F21A19E8400B929FC;
 					};
 				};
@@ -527,6 +539,7 @@
 				9135439621A19E8400B929FC /* MainViewController.swift in Sources */,
 				91EB4A7E22AFDABF0022D8F9 /* String+Localization.swift in Sources */,
 				91B9D16222AFCA18006FC2AB /* Services.swift in Sources */,
+				911D00072338E212000F076D /* StandardStyledUIButton.swift in Sources */,
 				91AD5ECA220F100F001F1AAC /* UIViewController+Utils.swift in Sources */,
 				91C54655220DDE70008BA297 /* MenuViewController.swift in Sources */,
 				91AFDE16221EDDE9001B046A /* SignInViewController.swift in Sources */,
@@ -759,7 +772,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lubusz.TravelManagerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TravelManager.app/TravelManager";
 			};
@@ -780,7 +793,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lubusz.TravelManagerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TravelManager.app/TravelManager";
 			};

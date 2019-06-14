@@ -9,4 +9,4 @@ final class MainViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
         performSegue(withIdentifier: "showSignIn")
     }
-}
+}  
