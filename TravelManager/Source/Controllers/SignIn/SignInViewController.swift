@@ -1,4 +1,3 @@
-import RxCocoa
 import RxSwift
 import Firebase
 
@@ -11,11 +10,11 @@ final class SignInViewController: UIViewController {
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
 
-    // MARK: Variables
+    // MARK: - Variables
     
     private let bag = DisposeBag()
     
-    // MARK: Life cycle
+    // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,21 +1,24 @@
-import UIKit
+import RxSwift
+import RxCocoa
 import Firebase
 
 final class SignUpViewController: UIViewController {
     
-    // MARK: Outlets
+    // MARK: - Outlets
     
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var registerButton: StandardStyledUIButton!
     
-    // MARK: Actions
-
-    @IBAction private func registerButtonClicked() {
-        register(username: usernameTextField.text ?? "", password: passwordTextField.text ?? "")
-    }
+    // MARK: - Variables
     
-    // MARK: Life cycle
+    let bag = DisposeBag()
+    
+    // MARK: - Life cycle
+    
+    override func viewDidLoad() {
+        registerButton.rx.tap.bind { self.register(username: self.usernameTextField.text ?? "", password: self.passwordTextField.text ?? "") }.disposed(by: bag)
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

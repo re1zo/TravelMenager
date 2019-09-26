@@ -2,9 +2,9 @@ import Foundation
 
 struct Settings {
 
-    static var googleMapsApiKey: String {
+    static var googleMapsPlatformApiKey: String {
         let environment = settings?.object(forKey: current) as? NSDictionary
-        return environment?.object(forKey: "googleMapsApiKey") as? String ?? ""
+        return environment?.object(forKey: "googleMapsPlatformApiKey") as? String ?? ""
     }
     
     private static var settings: NSDictionary? {

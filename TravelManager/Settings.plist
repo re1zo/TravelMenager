@@ -6,8 +6,8 @@
 	<string>dev</string>
 	<key>dev</key>
 	<dict>
-		<key>googleMapsApiKey</key>
-		<string>AIzaSyCgQpSdGheKXYUjOZoyfLnS1juCSk7FjAE</string>
+		<key>googleMapsPlatformApiKey</key>
+		<string>AIzaSyCu3QRF5lmGb1IuL6LjKycXTNxL5Neoi7k</string>
 	</dict>
 </dict>
 </plist>

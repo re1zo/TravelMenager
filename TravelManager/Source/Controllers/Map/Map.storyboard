@@ -36,9 +36,6 @@
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="addPlaceButtonClicked" destination="wdX-Pt-4Lb" eventType="touchUpInside" id="oyJ-xP-d7J"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -55,7 +52,7 @@
                     <tabBarItem key="tabBarItem" title="Places" image="places" id="hdo-P6-5BY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="addPlaceButton" destination="1JE-8t-T4l" id="c3A-tD-rlc"/>
+                        <outlet property="addPlaceButton" destination="1JE-8t-T4l" id="mcT-Te-Dfq"/>
                         <outlet property="googleMapsView" destination="iXZ-AE-qa6" id="9Bn-K7-N7D"/>
                     </connections>
                 </viewController>

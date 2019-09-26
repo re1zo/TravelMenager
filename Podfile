@@ -5,7 +5,6 @@ target 'TravelManager' do
     pod 'FirebaseUI', '~> 8.1'
     pod 'GoogleMaps', '~> 3.4'
     pod 'GooglePlaces', '~> 3.4'
-
     pod 'RxSwift', '~> 5'
     pod 'RxCocoa', '~> 5'
 
