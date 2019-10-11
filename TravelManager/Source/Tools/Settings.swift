@@ -8,10 +8,10 @@ struct Settings {
     }
     
     private static var settings: NSDictionary? {
-        return NSDictionary(contentsOfFile: Bundle.main.path(forResource: "Settings", ofType: "plist")!)
+        NSDictionary(contentsOfFile: Bundle.main.path(forResource: "Settings", ofType: "plist")!)
     }
     
     private static var current: String {
-        return settings?.object(forKey: "current") as? String ?? ""
+        settings?.object(forKey: "current") as? String ?? ""
     }
 }
