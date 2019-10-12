@@ -1,6 +1,6 @@
 import UIKit
 
-extension UIButton {
+extension UIView {
     
     @IBInspectable var cornerRadius: CGFloat {
         get {

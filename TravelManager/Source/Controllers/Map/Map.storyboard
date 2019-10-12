@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wdX-Pt-4Lb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wdX-Pt-4Lb">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,30 +20,63 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JE-8t-T4l" customClass="StandardStyledUIButton" customModule="TravelManager" customModuleProvider="target">
-                                <rect key="frame" x="275" y="518" width="50" height="50"/>
-                                <color key="backgroundColor" red="0.31372549020000001" green="0.31764705879999999" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U50-O7-JPO" userLabel="Control Button View">
+                                <rect key="frame" x="255" y="478" width="90" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kc9-nn-fzH" customClass="StandardStyledUIButton" customModule="TravelManager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="50"/>
+                                        <color key="backgroundColor" red="0.31372549020000001" green="0.31764705879999999" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="DNN-pP-gCT"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="My places">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="SPH-NK-e3D" kind="presentation" id="Gde-yL-S2m"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JE-8t-T4l" customClass="StandardStyledUIButton" customModule="TravelManager" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="60" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.31372549020000001" green="0.31764705879999999" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="QTJ-Ir-6UK"/>
+                                            <constraint firstAttribute="width" constant="50" id="pJ4-En-54k"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="QTJ-Ir-6UK"/>
-                                    <constraint firstAttribute="width" constant="50" id="pJ4-En-54k"/>
+                                    <constraint firstItem="kc9-nn-fzH" firstAttribute="top" secondItem="U50-O7-JPO" secondAttribute="top" id="2Qf-Cj-LXw"/>
+                                    <constraint firstItem="1JE-8t-T4l" firstAttribute="top" secondItem="kc9-nn-fzH" secondAttribute="bottom" constant="10" id="Dzo-1O-vDs"/>
+                                    <constraint firstItem="kc9-nn-fzH" firstAttribute="leading" secondItem="U50-O7-JPO" secondAttribute="leading" id="FPw-Ku-NWL"/>
+                                    <constraint firstAttribute="trailing" secondItem="kc9-nn-fzH" secondAttribute="trailing" id="R4I-Ae-Bnj"/>
+                                    <constraint firstAttribute="trailing" secondItem="1JE-8t-T4l" secondAttribute="trailing" id="f26-G8-6GA"/>
+                                    <constraint firstAttribute="bottom" secondItem="1JE-8t-T4l" secondAttribute="bottom" id="wKC-6a-yqe"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="+">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="25"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LBq-6a-G5T" firstAttribute="trailing" secondItem="1JE-8t-T4l" secondAttribute="trailing" constant="50" id="3ar-vR-s3W"/>
-                            <constraint firstItem="LBq-6a-G5T" firstAttribute="bottom" secondItem="1JE-8t-T4l" secondAttribute="bottom" constant="50" id="Fw2-dW-biY"/>
                             <constraint firstItem="iXZ-AE-qa6" firstAttribute="leading" secondItem="LBq-6a-G5T" secondAttribute="leading" id="Zqh-c6-FhB"/>
                             <constraint firstItem="LBq-6a-G5T" firstAttribute="trailing" secondItem="iXZ-AE-qa6" secondAttribute="trailing" id="emk-C0-Cgs"/>
+                            <constraint firstItem="LBq-6a-G5T" firstAttribute="bottom" secondItem="U50-O7-JPO" secondAttribute="bottom" constant="30" id="fAK-Uh-tQP"/>
+                            <constraint firstItem="LBq-6a-G5T" firstAttribute="trailing" secondItem="U50-O7-JPO" secondAttribute="trailing" constant="30" id="io3-1A-bMo"/>
                             <constraint firstAttribute="bottom" secondItem="iXZ-AE-qa6" secondAttribute="bottom" id="pMw-1w-I99"/>
                             <constraint firstItem="iXZ-AE-qa6" firstAttribute="top" secondItem="gMO-Nk-6ha" secondAttribute="top" id="yJ5-Lo-y5c"/>
                         </constraints>
@@ -59,6 +92,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZiP-yP-KXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="134"/>
+        </scene>
+        <!--MyPlaces-->
+        <scene sceneID="ze5-NT-L5v">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyPlaces" id="SPH-NK-e3D" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="a3P-gc-8la"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NGc-Nr-gdw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824" y="133"/>
         </scene>
     </scenes>
     <resources>

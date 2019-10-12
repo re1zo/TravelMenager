@@ -5,20 +5,23 @@ import GooglePlaces
 
 final class MapViewController: UIViewController {
 
-    // MARK: Outlets
+    // MARK: - Outlets
 
     @IBOutlet private weak var addPlaceButton: StandardStyledUIButton!
     @IBOutlet private weak var googleMapsView: GMSMapView!
     
-    // MARK: Variables
+    // MARK: - Variables
     
     private let bag = DisposeBag()
 
-    // MARK: Life cycle
+    // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addPlaceButton.rx.tap.bind { self.findPlace() }.disposed(by: bag)
+        UIView.animate(withDuration: 5) {
+            self.addPlaceButton.tintColor = .black
+        }
     }
     
     private func findPlace() {
@@ -44,7 +47,7 @@ final class MapViewController: UIViewController {
     }
 }
 
-// MARK: GMSAutocompleteViewControllerDelegate
+// MARK: - GMSAutocompleteViewControllerDelegate
 extension MapViewController: GMSAutocompleteViewControllerDelegate {
 
   func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
