@@ -1,9 +1,10 @@
 import UIKit
 
 final class MyPlacesCell: UICollectionViewCell {
-    
+
     @IBOutlet weak var titleLabel: UILabel!
-    
+    @IBOutlet weak var cityImageView: UIImageView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.backgroundColor = CoolColors.random

@@ -1,6 +1,7 @@
 target 'TravelManager' do
     
     pod 'Alamofire', '~> 5.0.0-rc.2'
+    pod 'Kingfisher', '~> 5.8'
     pod 'Firebase', '~> 6.10'
     pod 'FirebaseUI', '~> 8.2'
     pod 'GoogleMaps', '~> 3.5'

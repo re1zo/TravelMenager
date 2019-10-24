@@ -1,4 +1,1 @@
-final class SettingsViewModel {
-  
-    
-}
+final class SettingsViewModel {}

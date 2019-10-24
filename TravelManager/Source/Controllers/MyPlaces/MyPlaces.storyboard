@@ -82,29 +82,26 @@
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="OHE-pf-a9q" appends="YES" id="LPs-CZ-d3e"/>
+                                </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHd-c3-EIB">
-                                <rect key="frame" x="0.0" y="44" width="414" height="617"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="59x-jK-TUC" secondAttribute="bottom" id="5Dq-VI-UuZ"/>
-                            <constraint firstItem="gHd-c3-EIB" firstAttribute="top" secondItem="Sha-io-yRx" secondAttribute="top" id="Fju-h3-TQK"/>
-                            <constraint firstItem="Sha-io-yRx" firstAttribute="trailing" secondItem="gHd-c3-EIB" secondAttribute="trailing" id="IbF-or-kjN"/>
                             <constraint firstItem="59x-jK-TUC" firstAttribute="leading" secondItem="WWQ-4T-apY" secondAttribute="leading" id="O5y-Ii-vFG"/>
-                            <constraint firstItem="59x-jK-TUC" firstAttribute="top" secondItem="gHd-c3-EIB" secondAttribute="bottom" id="SZ8-ed-IKf"/>
-                            <constraint firstItem="gHd-c3-EIB" firstAttribute="leading" secondItem="Sha-io-yRx" secondAttribute="leading" id="Ulf-V5-NsC"/>
                             <constraint firstAttribute="trailing" secondItem="59x-jK-TUC" secondAttribute="trailing" id="ujK-hs-vt0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sha-io-yRx"/>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="JLW-vV-VSg" id="eP5-yy-Qda"/>
-                        <outlet property="dismissButton" destination="gHd-c3-EIB" id="Qaw-nL-Iqj"/>
+                        <outlet property="placesCollectionView" destination="JLW-vV-VSg" id="eP5-yy-Qda"/>
+                        <outlet property="swipeDownGesture" destination="OHE-pf-a9q" id="hQt-lB-uv5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CeX-aP-3Wo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="OHE-pf-a9q"/>
             </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="111.83035714285714"/>
         </scene>

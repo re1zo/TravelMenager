@@ -3,19 +3,19 @@ import RxCocoa
 import Firebase
 
 final class SignUpViewController: UIViewController {
-    
+
     // MARK: - Outlets
-    
+
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var registerButton: StandardStyledUIButton!
-    
+
     // MARK: - Variables
-    
+
     let bag = DisposeBag()
-    
+
     // MARK: - Life cycle
-    
+
     override func viewDidLoad() {
         registerButton.rx.tap.bind { self.register(username: self.usernameTextField.text ?? "", password: self.passwordTextField.text ?? "") }.disposed(by: bag)
     }
@@ -24,12 +24,12 @@ final class SignUpViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = false
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
     }
-    
+
     private func register(username: String, password: String) {
         Auth.auth().createUser(withEmail: username, password: password) { [weak self] data, error in
             guard let strongSelf = self else {

@@ -1,13 +1,13 @@
 extension String {
-    
+
     func localized(_ instance: Localization = Localization.default) -> String {
         instance.string(forPath: self) ?? self
     }
-    
+
     func localized(_ instance: Localization = Localization.default, parameters: String...) -> String {
         (instance.string(forPath: self) ?? self).parametrized(parameters)
     }
-    
+
     func parametrized(_ parameters: [String]) -> String {
         var result = self
         parameters.enumerated().forEach {

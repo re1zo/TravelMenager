@@ -1,7 +1,7 @@
 import UIKit
 
 final class CoolColors {
-    
+
     private static let all: [UIColor] = [
         #colorLiteral(red: 0.02352941176, green: 0.8392156863, blue: 0.6274509804, alpha: 1),
         #colorLiteral(red: 0.937254902, green: 0.2784313725, blue: 0.4352941176, alpha: 1),

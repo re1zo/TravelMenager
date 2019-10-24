@@ -23,8 +23,15 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rfH-kO-pTd">
+                        <rect key="frame" x="0.0" y="0.0" width="266" height="141"/>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="rfH-kO-pTd" firstAttribute="top" secondItem="8MD-YH-g5t" secondAttribute="top" id="6Ia-fw-uFJ"/>
+                    <constraint firstAttribute="bottom" secondItem="rfH-kO-pTd" secondAttribute="bottom" id="7fc-Su-QlL"/>
+                    <constraint firstItem="rfH-kO-pTd" firstAttribute="leading" secondItem="8MD-YH-g5t" secondAttribute="leading" id="WlN-En-NvC"/>
+                    <constraint firstAttribute="trailing" secondItem="rfH-kO-pTd" secondAttribute="trailing" id="csd-DV-H7T"/>
                     <constraint firstItem="dtf-eN-rH2" firstAttribute="top" secondItem="8MD-YH-g5t" secondAttribute="top" constant="15" id="geB-1J-fzu"/>
                     <constraint firstItem="dtf-eN-rH2" firstAttribute="leading" secondItem="8MD-YH-g5t" secondAttribute="leading" constant="10" id="gfJ-Kh-wWu"/>
                 </constraints>
@@ -36,6 +43,7 @@
             </collectionViewCellContentView>
             <size key="customSize" width="266" height="141"/>
             <connections>
+                <outlet property="cityImageView" destination="rfH-kO-pTd" id="mti-IR-dhc"/>
                 <outlet property="titleLabel" destination="dtf-eN-rH2" id="srr-0f-R9K"/>
             </connections>
             <point key="canvasLocation" x="-533.33333333333337" y="-1.6741071428571428"/>

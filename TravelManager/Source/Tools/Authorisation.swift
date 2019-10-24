@@ -1,4 +1,1 @@
-final class Authorisation {
-    
-    
-}
+final class Authorisation {}
