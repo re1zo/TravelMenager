@@ -6,8 +6,9 @@ final class MyPlacesViewController: UIViewController {
     // MARK: - Outlets
 
     @IBOutlet private weak var placesCollectionView: UICollectionView!
+    @IBOutlet private weak var closeButton: StandardStyledUIButton!
     @IBOutlet private var swipeDownGesture: UISwipeGestureRecognizer!
-    
+
     // MARK: - Variables
 
     private var places: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -18,10 +19,11 @@ final class MyPlacesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        closeButton.rx.tap.bind { self.dismissPlaces() }.disposed(by: bag)
         placesCollectionView.register(UINib(nibName: "MyPlacesCell", bundle: nil), forCellWithReuseIdentifier: "defaultMyPlacesCell")
         swipeDownGesture.addTarget(self, action: #selector(dismissPlaces))
     }
-    
+
     @objc private func dismissPlaces() {
         dismiss(animated: true, completion: nil)
     }

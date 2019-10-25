@@ -1,5 +1,5 @@
 import RxSwift
-import Firebase
+import RxCocoa
 
 final class SignInViewController: UIViewController {
 
@@ -7,10 +7,13 @@ final class SignInViewController: UIViewController {
 
     @IBOutlet private weak var signInButton: StandardStyledUIButton!
     @IBOutlet private weak var testAccountSignInButton: StandardStyledUIButton!
-    @IBOutlet private weak var usernameTextField: UITextField!
+    @IBOutlet private weak var regiesterButton: UIButton!
+    @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
 
     // MARK: - Variables
+
+    var signInViewModel: SignInViewModel!
 
     private let bag = DisposeBag()
 
@@ -18,17 +21,26 @@ final class SignInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        signInButton.rx.tap.bind { self.signIn(username: self.usernameTextField.text ?? "", password: self.passwordTextField.text ?? "") }.disposed(by: bag)
-        testAccountSignInButton.rx.tap.bind { self.signIn(username: "ifenix@gazeta.pl", password: "Test1234") }.disposed(by: bag)
+        bindUI()
     }
 
-    private func signIn(username: String, password: String) {
-        Auth.auth().signIn(withEmail: username, password: password) { [weak self] user, _ in
-            guard let strongSelf = self, let user = user else {
-                return
-            }
+    private func bindUI() {
+        emailTextField.rx.text
+            .orEmpty
+            .bind(to: signInViewModel.email)
+            .disposed(by: bag)
+        
+        passwordTextField.rx.text
+            .orEmpty
+            .bind(to: signInViewModel.password)
+            .disposed(by: bag)
 
-            strongSelf.performSegue(withIdentifier: "showMenu")
-        }
+        regiesterButton.rx.tap
+            .bind(to: signInViewModel.signUp)
+            .disposed(by: bag)
+        
+        testAccountSignInButton.rx.tap
+            .bind { self.signInViewModel.reloadUser() }
+            .disposed(by: bag)
     }
 }

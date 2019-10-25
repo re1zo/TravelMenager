@@ -8,11 +8,9 @@ extension String {
         (instance.string(forPath: self) ?? self).parametrized(parameters)
     }
 
-    func parametrized(_ parameters: [String]) -> String {
+    private func parametrized(_ parameters: [String]) -> String {
         var result = self
-        parameters.enumerated().forEach {
-            result = result.replacingOccurrences(of: "{\($0.offset)}", with: $0.element)
-        }
+        parameters.enumerated().forEach { result = result.replacingOccurrences(of: "{\($0.offset)}", with: $0.element) }
         return result
     }
 }

@@ -12,12 +12,12 @@
         <!--My Places View Controller-->
         <scene sceneID="zMH-5P-hji">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="d53-Ky-HBk" customClass="MyPlacesViewController" customModule="TravelManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyPlacesViewController" modalPresentationStyle="overCurrentContext" id="d53-Ky-HBk" customClass="MyPlacesViewController" customModule="TravelManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WWQ-4T-apY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59x-jK-TUC" userLabel="Modal View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59x-jK-TUC" userLabel="Modal View" customClass="ShadowedView" customModule="TravelManager" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="661" width="414" height="235"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JLW-vV-VSg">
@@ -66,6 +66,23 @@
                                             <constraint firstAttribute="bottom" secondItem="Vkh-gj-cks" secondAttribute="bottom" constant="-20" id="sm6-hX-A61"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lu8-Qw-vdp" customClass="StandardStyledUIButton" customModule="TravelManager" customModuleProvider="target">
+                                        <rect key="frame" x="356" y="15" width="30" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="HJs-7a-ITT"/>
+                                            <constraint firstAttribute="height" constant="30" id="s8e-a2-0fz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <state key="normal" title="x">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94893664119999999" green="0.94907325509999996" blue="0.96851223710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -75,7 +92,9 @@
                                     <constraint firstAttribute="trailing" secondItem="JLW-vV-VSg" secondAttribute="trailing" id="WmH-wt-DcD"/>
                                     <constraint firstItem="JLW-vV-VSg" firstAttribute="top" secondItem="vyw-Rs-UMN" secondAttribute="bottom" id="bMP-nS-Ldj"/>
                                     <constraint firstAttribute="trailing" secondItem="vyw-Rs-UMN" secondAttribute="trailing" id="hkz-On-sqY"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lu8-Qw-vdp" secondAttribute="trailing" constant="28" id="iHj-Rg-MRd"/>
                                     <constraint firstItem="vyw-Rs-UMN" firstAttribute="leading" secondItem="59x-jK-TUC" secondAttribute="leading" id="iYe-MY-V6w"/>
+                                    <constraint firstItem="Lu8-Qw-vdp" firstAttribute="centerY" secondItem="Vkh-gj-cks" secondAttribute="centerY" id="oT0-uk-2eT"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -96,6 +115,7 @@
                         <viewLayoutGuide key="safeArea" id="Sha-io-yRx"/>
                     </view>
                     <connections>
+                        <outlet property="closeButton" destination="Lu8-Qw-vdp" id="5Iz-Vs-eaX"/>
                         <outlet property="placesCollectionView" destination="JLW-vV-VSg" id="eP5-yy-Qda"/>
                         <outlet property="swipeDownGesture" destination="OHE-pf-a9q" id="hQt-lB-uv5"/>
                     </connections>

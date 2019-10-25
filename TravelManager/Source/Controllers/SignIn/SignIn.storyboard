@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dqi-H3-ad0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dqi-H3-ad0">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,12 +11,12 @@
         <!--Sign In View Controller-->
         <scene sceneID="0ho-tN-B6S">
             <objects>
-                <viewController id="Dqi-H3-ad0" customClass="SignInViewController" customModule="TravelManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" id="Dqi-H3-ad0" customClass="SignInViewController" customModule="TravelManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qar-oP-elg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7fw-56-plh" userLabel="Login Text Field">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7fw-56-plh" userLabel="Login Text Field">
                                 <rect key="frame" x="25" y="250" width="325" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
@@ -48,9 +48,6 @@
                                 <state key="normal" title="Regiester">
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="kRz-CJ-GUD" kind="show" id="CBM-B0-S00"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awX-k5-m4k" customClass="StandardStyledUIButton" customModule="TravelManager" customModuleProvider="target">
                                 <rect key="frame" x="25" y="582" width="325" height="60"/>
@@ -99,32 +96,16 @@
                         <viewLayoutGuide key="safeArea" id="maT-sE-xk0"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="7fw-56-plh" id="jy5-wx-MMd"/>
                         <outlet property="passwordTextField" destination="aqV-d1-hP5" id="Ctk-Pd-d7E"/>
+                        <outlet property="regiesterButton" destination="hkl-u7-rUH" id="Cbq-d4-e2o"/>
                         <outlet property="signInButton" destination="rgD-qe-9MK" id="fHn-93-Cka"/>
                         <outlet property="testAccountSignInButton" destination="awX-k5-m4k" id="omV-CE-HV5"/>
-                        <outlet property="usernameTextField" destination="7fw-56-plh" id="jy5-wx-MMd"/>
-                        <segue destination="i5H-HM-DvB" kind="show" identifier="showMenu" id="MlC-rO-GfA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IwN-Ca-r0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="223" y="80"/>
-        </scene>
-        <!--Menu-->
-        <scene sceneID="Tps-jk-Z7Y">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Menu" id="i5H-HM-DvB" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jSi-xT-ykC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="880" y="58"/>
-        </scene>
-        <!--SignUp-->
-        <scene sceneID="zxc-9v-BKk">
-            <objects>
-                <viewControllerPlaceholder storyboardName="SignUp" id="kRz-CJ-GUD" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rzy-Tg-vUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="888" y="103"/>
         </scene>
     </scenes>
     <resources>

@@ -38,6 +38,8 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.deselectRow(at: indexPath, animated: true)
         }
         switch SettingsItem.allCases[indexPath.row] {
+        case .options:
+            break
         case .logout:
             try? Auth.auth().signOut()
             navigationController?.popToRootViewController(animated: true)

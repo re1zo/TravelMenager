@@ -1,11 +1,13 @@
 target 'TravelManager' do
+    platform :ios, '9.0'
+    use_frameworks!
     
-    pod 'Alamofire', '~> 5.0.0-rc.2'
-    pod 'Kingfisher', '~> 5.8'
-    pod 'Firebase', '~> 6.10'
-    pod 'FirebaseUI', '~> 8.2'
-    pod 'GoogleMaps', '~> 3.5'
-    pod 'GooglePlaces', '~> 3.5'
+    pod 'Alamofire', '~> 5.0.0-rc.3'
+    pod 'Kingfisher', '~> 5.12'
+    pod 'Firebase', '~> 6.14'
+    pod 'FirebaseUI', '~> 8.4'
+    pod 'GoogleMaps', '~> 3.7'
+    pod 'GooglePlaces', '~> 3.7'
     pod 'RxSwift', '~> 5'
     pod 'RxCocoa', '~> 5'
 

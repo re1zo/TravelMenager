@@ -1,10 +1,10 @@
 import UIKit
 
-final class MenuViewController: UIViewController {
+final class MenuViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let user = AppUser().current else {
+        guard let _ = AppUser().current else {
             navigationController?.popToRootViewController(animated: true)
             return
         }
