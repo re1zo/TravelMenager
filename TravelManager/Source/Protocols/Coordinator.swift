@@ -7,18 +7,32 @@ protocol Coordinator: class {
     var parentCoordinator: Coordinator? { get set }
 
     func start()
-    func end()
-    func dismiss()
 }
 
 extension Coordinator {
+
+    func start(coordinator: Coordinator) {
+        childCoordinators.append(coordinator)
+        coordinator.parentCoordinator = self
+        coordinator.start()
+    }
 
     func end() {
         parentCoordinator?.childCoordinators = childCoordinators.filter { $0 !== self }
     }
 
-    func dismiss() {
+    func logout() {
+        parentCoordinator?.childCoordinators = []
+        navigationController.popViewController(animated: true)
+    }
+
+    func back() {
         end()
         navigationController.popViewController(animated: true)
+    }
+
+    func dismiss() {
+        end()
+        navigationController.dismiss(animated: true)
     }
 }

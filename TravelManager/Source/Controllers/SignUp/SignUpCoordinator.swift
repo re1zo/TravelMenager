@@ -14,15 +14,15 @@ final class SignUpCoordinator: Coordinator {
     }
 
     func start() {
-        let storyboard = UIStoryboard(name: "SignUp", bundle: .main)
-        let signUpViewController = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
-        navigationController.rx.didMoveToParentViewController.subscribe(onNext: { controller in
+        let signUpViewController = UIStoryboard(name: "SignUp").instantiate(viewController: SignUpViewController.self)
+        signUpViewController.rx.didMoveToParentViewController.subscribe(onNext: { controller in
             if controller == nil {
                 self.end()
             }
         }).disposed(by: bag)
+
         let signUpViewModel = SignUpViewModel(service: GoogleAuthorisationService())
-        signUpViewModel.registered.subscribe(onCompleted: { self.dismiss() }).disposed(by: bag)
+        signUpViewModel.onRegister.subscribe(onCompleted: { self.back() }).disposed(by: bag)
         signUpViewController.signUpViewModel = signUpViewModel
         navigationController.pushViewController(signUpViewController, animated: true)
     }

@@ -29,16 +29,16 @@ final class SignInViewController: UIViewController {
             .orEmpty
             .bind(to: signInViewModel.email)
             .disposed(by: bag)
-        
+
         passwordTextField.rx.text
             .orEmpty
             .bind(to: signInViewModel.password)
             .disposed(by: bag)
 
         regiesterButton.rx.tap
-            .bind(to: signInViewModel.signUp)
+            .bind(to: signInViewModel.onSingUp)
             .disposed(by: bag)
-        
+
         testAccountSignInButton.rx.tap
             .bind { self.signInViewModel.reloadUser() }
             .disposed(by: bag)

@@ -1,9 +1,18 @@
 import UIKit
+import RxSwift
 
 final class MyPlacesCell: UICollectionViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var cityImageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var cityImageView: UIImageView!
+
+    var viewModel: MyPlacesCellViewModel! {
+        didSet {
+            viewModel.title.bind(to: titleLabel.rx.text).disposed(by: bag)
+        }
+    }
+
+    private let bag = DisposeBag()
 
     override func awakeFromNib() {
         super.awakeFromNib()

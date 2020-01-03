@@ -20,7 +20,7 @@ final class GoogleAuthorisationService: AuthorisationService {
             return Disposables.create()
         }
     }
-    
+
     func signUp(email: String, password: String) -> Single<String> {
         return Single<String>.create { single in
             Auth.auth().createUser(withEmail: email, password: password) { user, error in
