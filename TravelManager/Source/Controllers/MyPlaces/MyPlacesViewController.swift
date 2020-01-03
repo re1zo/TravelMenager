@@ -1,17 +1,16 @@
 import RxCocoa
 import RxSwift
 
-final class MyPlacesViewController: UIViewController {
+final class MyPlacesViewController: UIViewController, UICollectionViewDelegate {
 
     // MARK: - Outlets
 
     @IBOutlet private weak var placesCollectionView: UICollectionView!
     @IBOutlet private weak var closeButton: StandardStyledUIButton!
-    @IBOutlet private var swipeDownGesture: UISwipeGestureRecognizer!
 
     // MARK: - Variables
 
-    private var places: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    var myPlacesViewModel: MyPlacesViewModel!
 
     private let bag = DisposeBag()
 
@@ -19,34 +18,30 @@ final class MyPlacesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        closeButton.rx.tap.bind { self.dismissPlaces() }.disposed(by: bag)
+        bindUI()
+    }
+
+    func bindUI() {
+        closeButton.rx.tap
+            .bind(to: myPlacesViewModel.onUsedPlaces)
+            .disposed(by: bag)
+
         placesCollectionView.register(UINib(nibName: "MyPlacesCell", bundle: nil), forCellWithReuseIdentifier: "defaultMyPlacesCell")
-        swipeDownGesture.addTarget(self, action: #selector(dismissPlaces))
-    }
+        placesCollectionView.rx.setDelegate(self)
+            .disposed(by: bag)
 
-    @objc private func dismissPlaces() {
-        dismiss(animated: true, completion: nil)
-    }
-}
-
-// MARK: - UICollectionViewDelegate & UICollectionViewDataSource
-
-extension MyPlacesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-
-    func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
-        places.count
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "defaultMyPlacesCell", for: indexPath) as? MyPlacesCell else {
-            return UICollectionViewCell()
-        }
-        cell.titleLabel.text = "Warsaw"
-        return cell
-    }
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+        myPlacesViewModel.placesViewModels
+            .bind(to: placesCollectionView.rx.items(cellIdentifier: "defaultMyPlacesCell", cellType: MyPlacesCell.self)) { _, viewModel, cell in
+                cell.viewModel = viewModel
+            }
+            .disposed(by: bag)
+        
+        placesCollectionView.rx.itemSelected
+            .subscribe(onNext: { indexPath in
+                self.placesCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+                self.myPlacesViewModel.selected.onNext(indexPath.row)
+            })
+            .disposed(by: bag)
     }
 }
 

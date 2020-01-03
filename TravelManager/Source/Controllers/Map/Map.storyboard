@@ -38,9 +38,6 @@
                                                 <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="SPH-NK-e3D" kind="presentation" id="Gde-yL-S2m"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JE-8t-T4l" customClass="StandardStyledUIButton" customModule="TravelManager" customModuleProvider="target">
                                         <rect key="frame" x="40" y="60" width="50" height="50"/>
@@ -87,21 +84,12 @@
                     <connections>
                         <outlet property="addPlaceButton" destination="1JE-8t-T4l" id="mcT-Te-Dfq"/>
                         <outlet property="googleMapsView" destination="iXZ-AE-qa6" id="9Bn-K7-N7D"/>
+                        <outlet property="myPlacesButton" destination="kc9-nn-fzH" id="HtZ-I8-jSt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZiP-yP-KXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="134"/>
-        </scene>
-        <!--MyPlaces-->
-        <scene sceneID="ze5-NT-L5v">
-            <objects>
-                <viewControllerPlaceholder storyboardName="MyPlaces" id="SPH-NK-e3D" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="a3P-gc-8la"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NGc-Nr-gdw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="824" y="133"/>
         </scene>
     </scenes>
     <resources>

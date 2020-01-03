@@ -1,48 +1,42 @@
-import UIKit
-import Firebase
+import RxCocoa
+import RxSwift
 
 final class SettingsViewController: UIViewController {
 
     // MARK: - Outlets
 
-    @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var usernameLabel: UILabel!
+    @IBOutlet private weak var settingsTableView: UITableView!
+
+    // MARK: - Variables
+
+    var settingsViewModel: SettingsViewModel!
+
+    private let bag = DisposeBag()
 
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        usernameLabel.text = AppUser().current?.email ?? ""
-        tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: "defaultSettingsCell")
-    }
-}
-
-// MARK: - UITableViewDelegate && UITableViewDataSource
-
-extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
-
-    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        SettingsItem.allCases.count
+        bindUI()
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "defaultSettingsCell") as? SettingsTableViewCell else {
-            return UITableViewCell()
-        }
-        cell.textLabel?.text = SettingsItem.allCases[indexPath.row].rawValue
-        return cell
-    }
+    private func bindUI() {
+        settingsViewModel.email
+            .bind(to: usernameLabel.rx.text)
+            .disposed(by: bag)
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        defer {
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
-        switch SettingsItem.allCases[indexPath.row] {
-        case .options:
-            break
-        case .logout:
-            try? Auth.auth().signOut()
-            navigationController?.popToRootViewController(animated: true)
-        }
+        settingsViewModel.items
+            .bind(to: settingsTableView.rx.items(cellIdentifier: "defaultSettingsCell", cellType: SettingsTableViewCell.self)) { _, viewModel, cell in
+                cell.viewModel = viewModel
+            }
+            .disposed(by: bag)
+
+        settingsTableView.rx.itemSelected
+            .bind { indexPath in
+                self.settingsViewModel.selected(setting: indexPath.row)
+                self.settingsTableView.deselectRow(at: indexPath, animated: true)
+            }
+            .disposed(by: bag)
     }
 }

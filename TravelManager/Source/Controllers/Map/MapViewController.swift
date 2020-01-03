@@ -7,12 +7,13 @@ final class MapViewController: UIViewController {
 
     // MARK: - Outlets
 
-    @IBOutlet private weak var addPlaceButton: StandardStyledUIButton!
     @IBOutlet private weak var googleMapsView: GMSMapView!
+    @IBOutlet private weak var myPlacesButton: StandardStyledUIButton!
+    @IBOutlet private weak var addPlaceButton: StandardStyledUIButton!
 
     // MARK: - Variables
 
-    private var markers: [GMSMarker] = []
+    var mapViewModel: MapViewModel!
 
     private let bag = DisposeBag()
 
@@ -20,37 +21,34 @@ final class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addPlaceButton.rx.tap.bind { self.findPlace() }.disposed(by: bag)
+        bindUI()
     }
 
-    private func findPlace() {
-        let autocompleteController = GMSAutocompleteViewController()
-        autocompleteController.delegate = self
+    func bindUI() {
+        addPlaceButton.rx.tap
+            .bind(to: mapViewModel.onFindPlaces)
+            .disposed(by: bag)
 
-        let fields = GMSPlaceField(rawValue: UInt(GMSPlaceField.name.rawValue) |
-            UInt(GMSPlaceField.placeID.rawValue) | UInt(GMSPlaceField.coordinate.rawValue))!
-        autocompleteController.placeFields = fields
-
-        let filter = GMSAutocompleteFilter()
-        filter.type = .address
-        autocompleteController.autocompleteFilter = filter
-        present(autocompleteController, animated: true, completion: nil)
+        myPlacesButton.rx.tap
+            .bind(to: mapViewModel.onMyPlaces)
+            .disposed(by: bag)
+        
+        mapViewModel.markers
+            .bind { markers in
+                markers.forEach { marker in
+                    marker.marker.map = self.googleMapsView
+                }
+            }
+            .disposed(by: bag)
+        
+        mapViewModel.selected
+            .bind { self.select(marker: self.mapViewModel.markers.value[$0].marker) }
+            .disposed(by: bag)
     }
 
-    private func addMarker(coordinate: CLLocationCoordinate2D, title: String) {
-        let marker = GMSMarker()
-        marker.position = coordinate
-        marker.title = title
-        marker.map = googleMapsView
-        markers.append(marker)
-    }
-
-    private func remove(marker: GMSMarker?) {
-        guard let marker = marker else {
-            return
-        }
-        marker.map = nil
-        markers.removeAll { $0 == marker }
+    private func select(marker: GMSMarker) {
+        googleMapsView.selectedMarker = marker
+        googleMapsView.animate(toLocation: marker.position)
     }
 }
 
@@ -58,17 +56,20 @@ final class MapViewController: UIViewController {
 
 extension MapViewController: GMSAutocompleteViewControllerDelegate {
 
-    func viewController(_: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        addMarker(coordinate: place.coordinate, title: place.name ?? "")
-        dismiss(animated: true, completion: nil)
+    func viewController(_ controller: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        let mapMarker = MapMarker(place: place)
+        select(marker: mapMarker.marker)
+        mapViewModel.markers.acceptAppending(mapMarker)
+        controller.dismiss(animated: true, completion: nil)
     }
 
     func viewController(_: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        // TODO: This is awful and temporary solution.
         print("Error: ", error.localizedDescription)
     }
 
-    func wasCancelled(_: GMSAutocompleteViewController) {
-        dismiss(animated: true, completion: nil)
+    func wasCancelled(_ controller: GMSAutocompleteViewController) {
+        controller.dismiss(animated: true, completion: nil)
     }
 
     func didRequestAutocompletePredictions(_: GMSAutocompleteViewController) {

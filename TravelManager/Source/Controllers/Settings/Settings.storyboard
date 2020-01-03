@@ -70,12 +70,11 @@
                                                 <constraint firstItem="xdT-Dz-mCl" firstAttribute="leading" secondItem="BZE-Q1-ksM" secondAttribute="leadingMargin" constant="25" id="ihe-2d-PGq"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="xdT-Dz-mCl" id="C1q-JO-Bw6"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="F4n-xW-fGH" id="XmK-uY-Hm2"/>
-                                    <outlet property="delegate" destination="F4n-xW-fGH" id="the-wJ-VHO"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,7 +92,7 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="Zfq-XC-K5m"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="tableView" destination="Jqj-bN-RTX" id="QGg-hE-vN4"/>
+                        <outlet property="settingsTableView" destination="Jqj-bN-RTX" id="QGg-hE-vN4"/>
                         <outlet property="usernameLabel" destination="rPx-Pe-pb5" id="JFb-IV-9XN"/>
                     </connections>
                 </viewController>

@@ -44,10 +44,6 @@
                                                 <size key="customSize" width="179" height="119"/>
                                             </collectionViewCell>
                                         </cells>
-                                        <connections>
-                                            <outlet property="dataSource" destination="d53-Ky-HBk" id="EJt-Va-hvp"/>
-                                            <outlet property="delegate" destination="d53-Ky-HBk" id="vmK-mE-Bcc"/>
-                                        </connections>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vyw-Rs-UMN" userLabel="Header View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="25"/>
@@ -101,9 +97,6 @@
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="OHE-pf-a9q" appends="YES" id="LPs-CZ-d3e"/>
-                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -117,11 +110,9 @@
                     <connections>
                         <outlet property="closeButton" destination="Lu8-Qw-vdp" id="5Iz-Vs-eaX"/>
                         <outlet property="placesCollectionView" destination="JLW-vV-VSg" id="eP5-yy-Qda"/>
-                        <outlet property="swipeDownGesture" destination="OHE-pf-a9q" id="hQt-lB-uv5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CeX-aP-3Wo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="down" id="OHE-pf-a9q"/>
             </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="111.83035714285714"/>
         </scene>

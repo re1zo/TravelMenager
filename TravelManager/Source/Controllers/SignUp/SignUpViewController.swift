@@ -10,9 +10,9 @@ final class SignUpViewController: UIViewController {
     @IBOutlet private weak var registerButton: StandardStyledUIButton!
 
     // MARK: - Variables
-    
+
     var signUpViewModel: SignUpViewModel!
-    
+
     private let bag = DisposeBag()
 
     // MARK: - Life cycle
@@ -31,7 +31,7 @@ final class SignUpViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
     }
-    
+
     private func bindUI() {
         emailTextField.rx.text
             .orEmpty
@@ -42,9 +42,9 @@ final class SignUpViewController: UIViewController {
             .orEmpty
             .bind(to: signUpViewModel.password)
             .disposed(by: bag)
-        
+
         registerButton.rx.tap
             .bind { self.signUpViewModel.register() }
-            .disposed(by: bag))
+            .disposed(by: bag)
     }
 }

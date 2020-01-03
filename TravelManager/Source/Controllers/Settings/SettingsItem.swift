@@ -1,4 +1,4 @@
 enum SettingsItem: String, CaseIterable {
-    case options
+    case preferences
     case logout
 }

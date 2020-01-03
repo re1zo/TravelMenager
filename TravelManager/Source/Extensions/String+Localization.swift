@@ -1,10 +1,10 @@
 extension String {
 
-    func localized(_ instance: Localization = Localization.default) -> String {
+    func l10n(_ instance: Localization = Localization.default) -> String {
         instance.string(forPath: self) ?? self
     }
 
-    func localized(_ instance: Localization = Localization.default, parameters: String...) -> String {
+    func l10n(_ instance: Localization = Localization.default, parameters: String...) -> String {
         (instance.string(forPath: self) ?? self).parametrized(parameters)
     }
 
