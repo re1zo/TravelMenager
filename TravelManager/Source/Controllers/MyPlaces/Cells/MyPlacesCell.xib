@@ -34,6 +34,7 @@
                     <constraint firstAttribute="trailing" secondItem="rfH-kO-pTd" secondAttribute="trailing" id="csd-DV-H7T"/>
                     <constraint firstItem="dtf-eN-rH2" firstAttribute="top" secondItem="8MD-YH-g5t" secondAttribute="top" constant="15" id="geB-1J-fzu"/>
                     <constraint firstItem="dtf-eN-rH2" firstAttribute="leading" secondItem="8MD-YH-g5t" secondAttribute="leading" constant="10" id="gfJ-Kh-wWu"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dtf-eN-rH2" secondAttribute="trailing" constant="10" id="hFB-dT-2Eh"/>
                 </constraints>
                 <userDefinedRuntimeAttributes>
                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

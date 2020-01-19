@@ -16,7 +16,11 @@ final class MyPlacesCoordinator: Coordinator {
     }
 
     func start() {
-        
+        let myPlacesViewController = UIStoryboard(name: "MyPlaces").instantiate(viewController: MyPlacesViewController.self)
+        let myPlacesViewModel = MyPlacesViewModel(markers: BehaviorRelay<[MapMarker]>(value: []), selected: PublishSubject<Int>())
+        myPlacesViewModel.onUsedPlaces.subscribe(onNext: { self.dismiss() }).disposed(by: bag)
+        myPlacesViewController.myPlacesViewModel = myPlacesViewModel
+        navigationController.present(myPlacesViewController, animated: true)
     }
     
     func start(with markers: BehaviorRelay<[MapMarker]>, selected: PublishSubject<Int>) {
