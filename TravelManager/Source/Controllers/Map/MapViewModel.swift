@@ -21,12 +21,14 @@ final class MapViewModel {
             .subscribe(onSuccess: { markers in
                 self.markers.accept(markers)
             }, onError: { _ in
-                
+
             })
             .disposed(by: bag)
         
         markers.subscribe(onNext: { markers in
-            self.service.save(places: markers).subscribe(onSuccess: { _ in } , onError: { _ in }).disposed(by: self.bag)
+            if !markers.isEmpty {
+                self.service.save(places: markers).subscribe(onSuccess: { _ in } , onError: { _ in }).disposed(by: self.bag)
+            }
         }).disposed(by: bag)
     }
 }

@@ -10,7 +10,7 @@ final class MyPlacesViewModel {
     private let markers: BehaviorRelay<[MapMarker]>
 
     var placesViewModels: Observable<[MyPlacesCellViewModel]> {
-        Observable.of(markers.value.map { MyPlacesCellViewModel(title: $0.marker.title ?? "") })
+        Observable.of(markers.value.map { MyPlacesCellViewModel(title: $0.marker.title ?? "", country: $0.country) })
     }
     
     init(markers: BehaviorRelay<[MapMarker]>, selected: PublishSubject<Int>) {

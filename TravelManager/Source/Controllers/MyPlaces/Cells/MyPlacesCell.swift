@@ -4,11 +4,13 @@ import RxSwift
 final class MyPlacesCell: UICollectionViewCell {
 
     @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var countryLabel: UILabel!
     @IBOutlet private weak var cityImageView: UIImageView!
 
     var viewModel: MyPlacesCellViewModel! {
         didSet {
             viewModel.title.bind(to: titleLabel.rx.text).disposed(by: bag)
+            viewModel.country.bind(to: countryLabel.rx.text).disposed(by: bag)
         }
     }
 

@@ -38,6 +38,10 @@ final class SignInViewController: UIViewController {
         regiesterButton.rx.tap
             .bind(to: signInViewModel.onSingUp)
             .disposed(by: bag)
+        
+        signInButton.rx.tap
+            .bind { self.signInViewModel.signIn() }
+            .disposed(by: bag)
 
         testAccountSignInButton.rx.tap
             .bind { self.signInViewModel.reloadUser() }
