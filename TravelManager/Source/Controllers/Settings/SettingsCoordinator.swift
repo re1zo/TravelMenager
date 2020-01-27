@@ -34,4 +34,3 @@ final class SettingsCoordinator: Coordinator {
         start(coordinator: PreferencesCoordinator(navigationController: navigationController))
     }
 }
-

@@ -39,15 +39,15 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JE-8t-T4l" customClass="StandardStyledUIButton" customModule="TravelManager" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JE-8t-T4l" customClass="StandardStyledUIButton" customModule="TravelManager" customModuleProvider="target">
                                         <rect key="frame" x="40" y="60" width="50" height="50"/>
                                         <color key="backgroundColor" red="0.31372549020000001" green="0.31764705879999999" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="QTJ-Ir-6UK"/>
                                             <constraint firstAttribute="width" constant="50" id="pJ4-En-54k"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="+">
+                                        <color key="tintColor" red="0.94893664119999999" green="0.94907325509999996" blue="0.96851223710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="plus" catalog="system">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -94,5 +94,6 @@
     </scenes>
     <resources>
         <image name="places" width="30" height="30"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
 </document>

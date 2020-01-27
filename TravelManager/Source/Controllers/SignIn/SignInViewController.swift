@@ -1,5 +1,5 @@
-import RxSwift
 import RxCocoa
+import RxSwift
 
 final class SignInViewController: UIViewController {
 
@@ -38,7 +38,7 @@ final class SignInViewController: UIViewController {
         regiesterButton.rx.tap
             .bind(to: signInViewModel.onSingUp)
             .disposed(by: bag)
-        
+
         signInButton.rx.tap
             .bind { self.signInViewModel.signIn() }
             .disposed(by: bag)

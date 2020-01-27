@@ -62,15 +62,15 @@
                                             <constraint firstAttribute="bottom" secondItem="Vkh-gj-cks" secondAttribute="bottom" constant="-20" id="sm6-hX-A61"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lu8-Qw-vdp" customClass="StandardStyledUIButton" customModule="TravelManager" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lu8-Qw-vdp" customClass="StandardStyledUIButton" customModule="TravelManager" customModuleProvider="target">
                                         <rect key="frame" x="356" y="15" width="30" height="30"/>
                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="HJs-7a-ITT"/>
                                             <constraint firstAttribute="height" constant="30" id="s8e-a2-0fz"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                        <state key="normal" title="x">
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" image="xmark" catalog="system">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -109,12 +109,37 @@
                     </view>
                     <connections>
                         <outlet property="closeButton" destination="Lu8-Qw-vdp" id="5Iz-Vs-eaX"/>
+                        <outlet property="placeholderView" destination="fOR-FE-qlV" id="acG-ob-3s8"/>
                         <outlet property="placesCollectionView" destination="JLW-vV-VSg" id="eP5-yy-Qda"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CeX-aP-3Wo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="fOR-FE-qlV">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To select place, first you need add one🙂." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jv-Q6-GeN">
+                            <rect key="frame" x="15" y="59" width="210" height="54"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="2jv-Q6-GeN" firstAttribute="centerY" secondItem="0bT-IQ-z1D" secondAttribute="centerY" id="Dub-65-TtZ"/>
+                        <constraint firstItem="2jv-Q6-GeN" firstAttribute="top" secondItem="0bT-IQ-z1D" secondAttribute="top" constant="15" id="RYv-wC-mB5"/>
+                        <constraint firstItem="0bT-IQ-z1D" firstAttribute="bottom" secondItem="2jv-Q6-GeN" secondAttribute="bottom" constant="15" id="dNg-QD-dMp"/>
+                        <constraint firstAttribute="trailing" secondItem="2jv-Q6-GeN" secondAttribute="trailing" constant="15" id="nxI-Aj-BE9"/>
+                        <constraint firstItem="2jv-Q6-GeN" firstAttribute="centerX" secondItem="0bT-IQ-z1D" secondAttribute="centerX" id="tfl-Ni-xVf"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="0bT-IQ-z1D"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="111.83035714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="xmark" catalog="system" width="64" height="56"/>
+    </resources>
 </document>

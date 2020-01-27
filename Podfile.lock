@@ -350,8 +350,6 @@ PODS:
   - GTMSessionFetcher/Core (1.3.0)
   - GTMSessionFetcher/Full (1.3.0):
     - GTMSessionFetcher/Core (= 1.3.0)
-  - Kingfisher (5.12.0):
-    - Kingfisher/Core (= 5.12.0)
   - leveldb-library (1.22)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
@@ -374,7 +372,6 @@ DEPENDENCIES:
   - FirebaseUI (~> 8.4)
   - GoogleMaps (~> 3.7)
   - GooglePlaces (~> 3.7)
-  - Kingfisher (~> 5.12)
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
 
@@ -409,7 +406,6 @@ SPEC REPOS:
     - gRPC-Core
     - GTMAppAuth
     - GTMSessionFetcher
-    - Kingfisher
     - leveldb-library
     - nanopb
     - RxCocoa
@@ -447,7 +443,6 @@ SPEC CHECKSUMS:
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
   GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
   GTMSessionFetcher: 43b8b64263023d4f32caa0b40f4c8bfa3c5f36d8
-  Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
@@ -455,6 +450,6 @@ SPEC CHECKSUMS:
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SDWebImage: 29c340dbdcef342bb13125553f4e19ce056b07a7
 
-PODFILE CHECKSUM: 58aece3088dbcedeccd02ee19352878a9c942114
+PODFILE CHECKSUM: e8c09b990174d17ab5c178f4c69ea77d24ccabc8
 
 COCOAPODS: 1.8.4

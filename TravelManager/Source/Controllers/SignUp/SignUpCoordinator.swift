@@ -19,10 +19,13 @@ final class SignUpCoordinator: Coordinator {
             if controller == nil {
                 self.end()
             }
-        }).disposed(by: bag)
+        })
+            .disposed(by: bag)
 
         let signUpViewModel = SignUpViewModel(service: GoogleAuthorisationService())
-        signUpViewModel.onRegister.subscribe(onCompleted: { self.back() }).disposed(by: bag)
+        signUpViewModel.onRegister
+            .subscribe(onCompleted: { self.back() })
+            .disposed(by: bag)
         signUpViewController.signUpViewModel = signUpViewModel
         navigationController.pushViewController(signUpViewController, animated: true)
     }

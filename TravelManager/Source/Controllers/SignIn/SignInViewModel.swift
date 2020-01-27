@@ -16,20 +16,20 @@ final class SignInViewModel {
     init(service: AuthorisationService) {
         self.service = service
     }
-    
+
     func signIn() {
-            service.signIn(email: email.value , password: password.value)
-                .subscribe(
-                    onSuccess: { [weak self] _ in
-                        self?.onSignIn.onNext(())
-                    },
-                    onError: { _ in
-                        // TODO: Error alert implementation
-                    }
-                )
-                .disposed(by: bag)
+        service.signIn(email: email.value, password: password.value)
+            .subscribe(
+                onSuccess: { [weak self] _ in
+                    self?.onSignIn.onNext(())
+                },
+                onError: { _ in
+                    // TODO: Alert implementation
+                }
+            )
+            .disposed(by: bag)
     }
-    
+
     func reloadUser() {
         service.signIn(email: "ifenix@gazeta.pl", password: "Test1234")
             .subscribe(
@@ -37,7 +37,7 @@ final class SignInViewModel {
                     self?.onSignIn.onNext(())
                 },
                 onError: { _ in
-                    // TODO: Error alert implementation
+                    // TODO: Alert implementation
                 }
             )
             .disposed(by: bag)

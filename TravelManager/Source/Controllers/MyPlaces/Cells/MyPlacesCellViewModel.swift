@@ -2,11 +2,12 @@ import RxSwift
 
 final class MyPlacesCellViewModel {
 
-    let title: BehaviorSubject<String>
-    let country: BehaviorSubject<String>
+    let title: Observable<String>
+    let country: Observable<String>
+    let removePlace = PublishSubject<Void>()
 
-    init(title: String, country: String) {
-        self.title = BehaviorSubject(value: title)
-        self.country = BehaviorSubject(value: country)
+    init(marker: MapMarker) {
+        title = Observable.just(marker.marker.title ?? "")
+        country = Observable.just(marker.country)
     }
 }

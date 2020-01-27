@@ -1,20 +1,32 @@
 import RxRelay
 import RxSwift
-import GoogleMaps
 
 final class MyPlacesViewModel {
 
-    let selected: PublishSubject<Int>
-
     let onUsedPlaces = PublishSubject<Void>()
-    private let markers: BehaviorRelay<[MapMarker]>
 
-    var placesViewModels: Observable<[MyPlacesCellViewModel]> {
-        Observable.of(markers.value.map { MyPlacesCellViewModel(title: $0.marker.title ?? "", country: $0.country) })
-    }
-    
-    init(markers: BehaviorRelay<[MapMarker]>, selected: PublishSubject<Int>) {
+    let selected: PublishSubject<MapMarker>
+    let markers: BehaviorRelay<[MapMarker]>
+    lazy var shouldShowPlaceholder = BehaviorSubject(value: !markers.value.isEmpty)
+
+    private let bag = DisposeBag()
+
+    init(markers: BehaviorRelay<[MapMarker]>, selected: PublishSubject<MapMarker>) {
         self.markers = markers
         self.selected = selected
+
+        markers.subscribe(onNext: { markers in
+            self.shouldShowPlaceholder.onNext(!markers.isEmpty)
+        })
+            .disposed(by: bag)
+    }
+
+    func selected(row: Int) {
+        selected.onNext(markers.value[row])
+    }
+
+    func remove(marker: MapMarker) {
+        marker.marker.map = nil
+        markers.accept(markers.value.filter { $0 !== marker })
     }
 }

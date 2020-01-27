@@ -16,13 +16,13 @@ final class SignUpViewModel {
     }
 
     func register() {
-        service.signUp(email: email.value, password: password.value)
+        service.signUp(email: email.value, password: password.value).observeOn(MainScheduler.instance)
             .subscribe(
                 onSuccess: { [weak self] _ in
                     self?.onRegister.onCompleted()
                 },
-                onError: { [weak self] error in
-                    debugPrint(error.localizedDescription)
+                onError: { _ in
+                    // TODO: Alert implementation
                 }
             )
             .disposed(by: bag)

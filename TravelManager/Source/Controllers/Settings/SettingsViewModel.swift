@@ -1,4 +1,5 @@
 import RxSwift
+import RxRelay
 
 final class SettingsViewModel {
 
@@ -6,13 +7,10 @@ final class SettingsViewModel {
     let onOptions = PublishSubject<Void>()
 
     let email = Observable.just(AppUser().current?.email ?? "")
-
-    var items: Observable<[SettingsCellViewModel]> {
-        Observable.from(optional: SettingsItem.allCases.map { SettingsCellViewModel(title: $0.rawValue) })
-    }
+    let settings = BehaviorRelay(value: SettingsItem.allCases)
 
     func selected(setting: Int) {
-        switch SettingsItem.allCases[setting] {
+        switch settings.value[setting] {
         case .preferences:
             onOptions.onNext(())
         case .logout:

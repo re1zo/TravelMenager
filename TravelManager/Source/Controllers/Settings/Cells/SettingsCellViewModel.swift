@@ -1,10 +1,10 @@
-import RxRelay
+import RxSwift
 
 final class SettingsCellViewModel {
 
-    let title: BehaviorRelay<String>
+    let title: Observable<String>
 
-    init(title: String) {
-        self.title = BehaviorRelay(value: title)
+    init(setting: SettingsItem) {
+        title = Observable.just(setting.rawValue)
     }
 }

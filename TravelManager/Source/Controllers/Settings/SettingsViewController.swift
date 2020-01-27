@@ -26,9 +26,9 @@ final class SettingsViewController: UIViewController {
             .bind(to: usernameLabel.rx.text)
             .disposed(by: bag)
 
-        settingsViewModel.items
-            .bind(to: settingsTableView.rx.items(cellIdentifier: "defaultSettingsCell", cellType: SettingsTableViewCell.self)) { _, viewModel, cell in
-                cell.viewModel = viewModel
+        settingsViewModel.settings
+            .bind(to: settingsTableView.rx.items(cellIdentifier: "defaultSettingsCell", cellType: SettingsTableViewCell.self)) { _, setting, cell in
+                cell.viewModel = SettingsCellViewModel(setting: setting)
             }
             .disposed(by: bag)
 

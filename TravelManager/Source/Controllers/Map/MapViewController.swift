@@ -1,5 +1,5 @@
-import RxSwift
 import RxCocoa
+import RxSwift
 import GoogleMaps
 import GooglePlaces
 
@@ -32,7 +32,7 @@ final class MapViewController: UIViewController {
         myPlacesButton.rx.tap
             .bind(to: mapViewModel.onMyPlaces)
             .disposed(by: bag)
-        
+
         mapViewModel.markers
             .bind { markers in
                 markers.forEach { marker in
@@ -40,9 +40,9 @@ final class MapViewController: UIViewController {
                 }
             }
             .disposed(by: bag)
-        
+
         mapViewModel.selected
-            .bind { self.select(marker: self.mapViewModel.markers.value[$0].marker) }
+            .bind { self.select(marker: $0.marker) }
             .disposed(by: bag)
     }
 
@@ -57,9 +57,14 @@ final class MapViewController: UIViewController {
 extension MapViewController: GMSAutocompleteViewControllerDelegate {
 
     func viewController(_ controller: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        let mapMarker = MapMarker(place: place)
-        select(marker: mapMarker.marker)
-        mapViewModel.markers.acceptAppending(mapMarker)
+        let country = place.addressComponents?.first(where: { $0.types.first == "country" })?.name ?? ""
+        mapViewModel.createMarker(
+            id: place.placeID,
+            title: place.name,
+            country: country,
+            x: place.coordinate.latitude,
+            y: place.coordinate.longitude
+        )
         controller.dismiss(animated: true, completion: nil)
     }
 

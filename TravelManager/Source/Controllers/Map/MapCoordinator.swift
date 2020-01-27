@@ -33,7 +33,7 @@ final class MapCoordinator: Coordinator {
         navigationController.pushViewController(mapViewController, animated: true)
     }
 
-    private func myPlaces(markers: BehaviorRelay<[MapMarker]>, selected: PublishSubject<Int>) {
+    private func myPlaces(markers: BehaviorRelay<[MapMarker]>, selected: PublishSubject<MapMarker>) {
         let coordinator = MyPlacesCoordinator(navigationController: navigationController)
         childCoordinators.append(coordinator)
         coordinator.parentCoordinator = self
@@ -44,12 +44,11 @@ final class MapCoordinator: Coordinator {
         let autocompleteController = GMSAutocompleteViewController()
         autocompleteController.delegate = delegate
 
-        let fields = GMSPlaceField(rawValue: UInt(GMSPlaceField.name.rawValue) |
-            UInt(GMSPlaceField.placeID.rawValue) | UInt(GMSPlaceField.coordinate.rawValue))!
+        let fields = GMSPlaceField(rawValue: UInt(GMSPlaceField.name.rawValue) | UInt(GMSPlaceField.addressComponents.rawValue) | UInt(GMSPlaceField.placeID.rawValue) | UInt(GMSPlaceField.coordinate.rawValue))!
         autocompleteController.placeFields = fields
 
         let filter = GMSAutocompleteFilter()
-        filter.type = .address
+        filter.type = .city
         autocompleteController.autocompleteFilter = filter
         navigationController.present(autocompleteController, animated: true, completion: nil)
     }

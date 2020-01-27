@@ -19,7 +19,4 @@ final class CoolColors {
         #colorLiteral(red: 0.4273707271, green: 0.5568968654, blue: 0.6273716092, alpha: 1),
         #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1),
     ]
-    static var random: CGColor {
-        (all.randomElement() ?? .yellow).cgColor
-    }
 }
