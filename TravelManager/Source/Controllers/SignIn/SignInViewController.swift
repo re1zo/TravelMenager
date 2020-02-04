@@ -7,7 +7,7 @@ final class SignInViewController: UIViewController {
 
     @IBOutlet private weak var signInButton: StandardStyledUIButton!
     @IBOutlet private weak var testAccountSignInButton: StandardStyledUIButton!
-    @IBOutlet private weak var regiesterButton: UIButton!
+    @IBOutlet private weak var registerButton: UIButton!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
 
@@ -35,7 +35,7 @@ final class SignInViewController: UIViewController {
             .bind(to: signInViewModel.password)
             .disposed(by: bag)
 
-        regiesterButton.rx.tap
+        registerButton.rx.tap
             .bind(to: signInViewModel.onSingUp)
             .disposed(by: bag)
 
@@ -45,6 +45,10 @@ final class SignInViewController: UIViewController {
 
         testAccountSignInButton.rx.tap
             .bind { self.signInViewModel.reloadUser() }
+            .disposed(by: bag)
+
+        signInViewModel.notifyUser
+            .bind { self.infoAlert(title: $0.0, message: $0.1) }
             .disposed(by: bag)
     }
 }

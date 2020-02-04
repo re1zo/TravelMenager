@@ -10,6 +10,7 @@ final class MapViewModel {
 
     let markers = BehaviorRelay<[MapMarker]>(value: [])
     let selected = PublishSubject<MapMarker>()
+    let notifyUser = PublishSubject<(String, String)>()
 
     private let bag = DisposeBag()
 
@@ -19,8 +20,8 @@ final class MapViewModel {
         let reload = service.reloadPlaces()
         reload.subscribe(onSuccess: { markers in
             self.markers.accept(markers)
-        }, onError: { _ in
-            // TODO: Alert implementation
+        }, onError: { [weak self] error in
+            self?.notifyUser.onNext(("Error", error.localizedDescription))
         })
             .disposed(by: bag)
 
@@ -29,8 +30,8 @@ final class MapViewModel {
                 self.service.save(places: markers)
                     .subscribe(
                         onSuccess: { _ in },
-                        onError: { _ in
-                            // TODO: Alert implementation
+                        onError: { [weak self] error in
+                            self?.notifyUser.onNext(("Error", error.localizedDescription))
                         }
                     )
                     .disposed(by: self.bag)

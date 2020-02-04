@@ -8,6 +8,7 @@ final class SignUpViewModel {
     let email = BehaviorRelay(value: "")
     let password = BehaviorRelay(value: "")
     let onRegister = PublishSubject<Void>()
+    let notifyUser = PublishSubject<(String, String)>()
 
     private let bag = DisposeBag()
 
@@ -18,11 +19,12 @@ final class SignUpViewModel {
     func register() {
         service.signUp(email: email.value, password: password.value).observeOn(MainScheduler.instance)
             .subscribe(
-                onSuccess: { [weak self] _ in
+                onSuccess: { [weak self] info in
+                    self?.notifyUser.onNext(("Success", info))
                     self?.onRegister.onCompleted()
                 },
-                onError: { _ in
-                    // TODO: Alert implementation
+                onError: { [weak self] error in
+                    self?.notifyUser.onNext(("Error", error.localizedDescription))
                 }
             )
             .disposed(by: bag)

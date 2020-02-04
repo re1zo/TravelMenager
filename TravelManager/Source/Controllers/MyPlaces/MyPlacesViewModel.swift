@@ -26,7 +26,7 @@ final class MyPlacesViewModel {
     }
 
     func remove(marker: MapMarker) {
-        marker.marker.map = nil
+        marker.googleMarker.map = nil
         markers.accept(markers.value.filter { $0 !== marker })
     }
 }

@@ -7,7 +7,7 @@ final class MyPlacesCellViewModel {
     let removePlace = PublishSubject<Void>()
 
     init(marker: MapMarker) {
-        title = Observable.just(marker.marker.title ?? "")
+        title = Observable.just(marker.googleMarker.title ?? "")
         country = Observable.just(marker.country)
     }
 }

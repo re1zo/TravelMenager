@@ -5,7 +5,7 @@ class MapMarker: Decodable {
 
     let id: String
     let country: String
-    let marker: GMSMarker
+    let googleMarker: GMSMarker
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -21,7 +21,7 @@ class MapMarker: Decodable {
         let marker = GMSMarker()
         marker.title = title
         marker.position = CLLocationCoordinate2D(latitude: x, longitude: y)
-        self.marker = marker
+        googleMarker = marker
     }
 
     required init(from decoder: Decoder) throws {
@@ -34,15 +34,15 @@ class MapMarker: Decodable {
             latitude: try values.decode(Double.self, forKey: .x),
             longitude: try values.decode(Double.self, forKey: .y)
         )
-        self.marker = marker
+        googleMarker = marker
     }
 
     var data: [String: Any] {
-        return [
+        [
             "id": id,
-            "x": marker.position.latitude,
-            "y": marker.position.longitude,
-            "title": marker.title ?? "",
+            "x": googleMarker.position.latitude,
+            "y": googleMarker.position.longitude,
+            "title": googleMarker.title ?? "",
             "country": country,
         ]
     }

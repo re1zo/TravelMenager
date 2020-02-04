@@ -36,13 +36,13 @@ final class MapViewController: UIViewController {
         mapViewModel.markers
             .bind { markers in
                 markers.forEach { marker in
-                    marker.marker.map = self.googleMapsView
+                    marker.googleMarker.map = self.googleMapsView
                 }
             }
             .disposed(by: bag)
 
         mapViewModel.selected
-            .bind { self.select(marker: $0.marker) }
+            .bind { self.select(marker: $0.googleMarker) }
             .disposed(by: bag)
     }
 
@@ -69,8 +69,7 @@ extension MapViewController: GMSAutocompleteViewControllerDelegate {
     }
 
     func viewController(_: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        // TODO: This is awful and temporary solution.
-        print("Error: ", error.localizedDescription)
+        infoAlert(message: error.localizedDescription)
     }
 
     func wasCancelled(_ controller: GMSAutocompleteViewController) {

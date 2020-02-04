@@ -10,6 +10,7 @@ final class SignInViewModel {
 
     let email = BehaviorRelay(value: "")
     let password = BehaviorRelay(value: "")
+    let notifyUser = PublishSubject<(String, String)>()
 
     private let bag = DisposeBag()
 
@@ -23,8 +24,8 @@ final class SignInViewModel {
                 onSuccess: { [weak self] _ in
                     self?.onSignIn.onNext(())
                 },
-                onError: { _ in
-                    // TODO: Alert implementation
+                onError: { [weak self] error in
+                    self?.notifyUser.onNext(("Error", error.localizedDescription))
                 }
             )
             .disposed(by: bag)
@@ -36,8 +37,8 @@ final class SignInViewModel {
                 onSuccess: { [weak self] _ in
                     self?.onSignIn.onNext(())
                 },
-                onError: { _ in
-                    // TODO: Alert implementation
+                onError: { [weak self] error in
+                    self?.notifyUser.onNext(("Error", error.localizedDescription))
                 }
             )
             .disposed(by: bag)

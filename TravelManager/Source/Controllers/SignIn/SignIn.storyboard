@@ -42,10 +42,10 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkl-u7-rUH">
-                                <rect key="frame" x="160.5" y="448" width="54" height="27"/>
+                                <rect key="frame" x="164" y="448" width="47" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="tintColor" red="0.31372549020000001" green="0.31764705879999999" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Regiester">
+                                <state key="normal" title="Register">
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -98,7 +98,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="7fw-56-plh" id="jy5-wx-MMd"/>
                         <outlet property="passwordTextField" destination="aqV-d1-hP5" id="Ctk-Pd-d7E"/>
-                        <outlet property="regiesterButton" destination="hkl-u7-rUH" id="Cbq-d4-e2o"/>
+                        <outlet property="registerButton" destination="hkl-u7-rUH" id="Cbq-d4-e2o"/>
                         <outlet property="signInButton" destination="rgD-qe-9MK" id="fHn-93-Cka"/>
                         <outlet property="testAccountSignInButton" destination="awX-k5-m4k" id="omV-CE-HV5"/>
                     </connections>

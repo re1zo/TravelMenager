@@ -15,7 +15,6 @@
 		910633F023BF7855009151BE /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910633EF23BF7855009151BE /* MapViewModel.swift */; };
 		9109AA1A23D09CEC00F58C2A /* MyPlacesCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9109AA1923D09CEC00F58C2A /* MyPlacesCellViewModel.swift */; };
 		9109AA2023D10D0400F58C2A /* UIStoryboard+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9109AA1F23D10D0400F58C2A /* UIStoryboard+Utils.swift */; };
-		911248EE23E0A0C800CE812B /* RX+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911248ED23E0A0C800CE812B /* RX+Alert.swift */; };
 		9116B4E1221EEA3900DA5466 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9116B4E0221EEA3900DA5466 /* SettingsItem.swift */; };
 		9116B4E4221EEB4900DA5466 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9116B4E3221EEB4900DA5466 /* SettingsTableViewCell.swift */; };
 		911D00072338E212000F076D /* StandardStyledUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D00062338E212000F076D /* StandardStyledUIButton.swift */; };
@@ -52,8 +51,8 @@
 		91B9D16722AFD361006FC2AB /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B9D16622AFD361006FC2AB /* SignUp.storyboard */; };
 		91B9D16922AFD37B006FC2AB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B9D16822AFD37B006FC2AB /* SignUpViewController.swift */; };
 		91BDC0B723BE3AEA001742AA /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91BDC0B623BE3AEA001742AA /* Preferences.storyboard */; };
-		91BDC0B923BE3AFA001742AA /* PreferencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BDC0B823BE3AFA001742AA /* PreferencesViewModel.swift */; };
 		91BDC0BB23BE3B1A001742AA /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BDC0BA23BE3B1A001742AA /* PreferencesViewController.swift */; };
+		91C0221323EA02B300640C05 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C0221223EA02B300640C05 /* UIViewController+Alert.swift */; };
 		91C1559623BBD140003C7757 /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1559523BBD140003C7757 /* MenuCoordinator.swift */; };
 		91C5465B220DE0BA008BA297 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C5465A220DE0BA008BA297 /* Map.storyboard */; };
 		91C54661220DE65B008BA297 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C54660220DE65B008BA297 /* Settings.storyboard */; };
@@ -93,7 +92,6 @@
 		910633EF23BF7855009151BE /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		9109AA1923D09CEC00F58C2A /* MyPlacesCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlacesCellViewModel.swift; sourceTree = "<group>"; };
 		9109AA1F23D10D0400F58C2A /* UIStoryboard+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Utils.swift"; sourceTree = "<group>"; };
-		911248ED23E0A0C800CE812B /* RX+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RX+Alert.swift"; sourceTree = "<group>"; };
 		9116B4E0221EEA3900DA5466 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
 		9116B4E3221EEB4900DA5466 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		911D00062338E212000F076D /* StandardStyledUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardStyledUIButton.swift; sourceTree = "<group>"; };
@@ -134,8 +132,8 @@
 		91B9D16622AFD361006FC2AB /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		91B9D16822AFD37B006FC2AB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		91BDC0B623BE3AEA001742AA /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
-		91BDC0B823BE3AFA001742AA /* PreferencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewModel.swift; sourceTree = "<group>"; };
 		91BDC0BA23BE3B1A001742AA /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		91C0221223EA02B300640C05 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		91C1559523BBD140003C7757 /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
 		91C5465A220DE0BA008BA297 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		91C54660220DE65B008BA297 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -203,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				9109AA1F23D10D0400F58C2A /* UIStoryboard+Utils.swift */,
+				91C0221223EA02B300640C05 /* UIViewController+Alert.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -244,6 +243,7 @@
 		912AB05E222041490079BA75 /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				9184EDD823DF695000352C0E /* String+Utils.swift */,
 				912AB05C2220412D0079BA75 /* UIView+Style.swift */,
 			);
 			path = Style;
@@ -294,7 +294,7 @@
 		913F70B223BC0B9F00ACDCDD /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				91AF4CCC23D3A10E00F7FA34 /* DatabaseService */,
+				91AF4CCC23D3A10E00F7FA34 /* Database */,
 				91BDC0BC23BE3CA3001742AA /* Authorisation */,
 			);
 			path = Services;
@@ -328,14 +328,13 @@
 			path = MyPlaces;
 			sourceTree = "<group>";
 		};
-		9168F4B623BBD8C2007EF2B3 /* RX */ = {
+		9168F4B623BBD8C2007EF2B3 /* Rx */ = {
 			isa = PBXGroup;
 			children = (
 				9168F4B423BBD3AC007EF2B3 /* Rx+ViewController.swift */,
 				91AF4CCA23D3812A00F7FA34 /* Rx+BehaviorRelay.swift */,
-				911248ED23E0A0C800CE812B /* RX+Alert.swift */,
 			);
-			path = RX;
+			path = Rx;
 			sourceTree = "<group>";
 		};
 		916FBE5C221DB95600F43F01 /* Tools */ = {
@@ -348,13 +347,13 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		91AF4CCC23D3A10E00F7FA34 /* DatabaseService */ = {
+		91AF4CCC23D3A10E00F7FA34 /* Database */ = {
 			isa = PBXGroup;
 			children = (
 				91AF4CCD23D3A12E00F7FA34 /* PlacesDatabaseService.swift */,
 				91AF4CCF23D3A1A200F7FA34 /* FirebasePlacesService.swift */,
 			);
-			path = DatabaseService;
+			path = Database;
 			sourceTree = "<group>";
 		};
 		91AFDE11221EDDAD001B046A /* SignIn */ = {
@@ -384,7 +383,6 @@
 			children = (
 				910633E923BF3B95009151BE /* PreferencesCoordinator.swift */,
 				91BDC0BA23BE3B1A001742AA /* PreferencesViewController.swift */,
-				91BDC0B823BE3AFA001742AA /* PreferencesViewModel.swift */,
 				91BDC0B623BE3AEA001742AA /* Preferences.storyboard */,
 			);
 			path = Preferences;
@@ -448,10 +446,9 @@
 			isa = PBXGroup;
 			children = (
 				9109AA2123D10ED900F58C2A /* UI */,
-				9168F4B623BBD8C2007EF2B3 /* RX */,
+				9168F4B623BBD8C2007EF2B3 /* Rx */,
 				912AB05E222041490079BA75 /* Style */,
 				91EB4A7D22AFDABF0022D8F9 /* String+Localization.swift */,
-				9184EDD823DF695000352C0E /* String+Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -659,8 +656,8 @@
 				9135439621A19E8400B929FC /* MainViewController.swift in Sources */,
 				91EB4A7E22AFDABF0022D8F9 /* String+Localization.swift in Sources */,
 				91D405C423521DF3008492E0 /* MyPlacesCell.swift in Sources */,
+				91C0221323EA02B300640C05 /* UIViewController+Alert.swift in Sources */,
 				91AF4CCB23D3812A00F7FA34 /* Rx+BehaviorRelay.swift in Sources */,
-				911248EE23E0A0C800CE812B /* RX+Alert.swift in Sources */,
 				91B9D16222AFCA18006FC2AB /* Services.swift in Sources */,
 				9133A6D423D4DDB7007778E4 /* MapMarker.swift in Sources */,
 				91F31867239FD5D600A4D82D /* Coordinator.swift in Sources */,
@@ -687,7 +684,6 @@
 				91BDC0BB23BE3B1A001742AA /* PreferencesViewController.swift in Sources */,
 				913E57B223BB9E4E0084BA33 /* SignUpViewModel.swift in Sources */,
 				912AB054222037490079BA75 /* SettingsViewModel.swift in Sources */,
-				91BDC0B923BE3AFA001742AA /* PreferencesViewModel.swift in Sources */,
 				910633EC23BF3F21009151BE /* MyPlacesCoordinator.swift in Sources */,
 				91AF4CD023D3A1A200F7FA34 /* FirebasePlacesService.swift in Sources */,
 				910633F023BF7855009151BE /* MapViewModel.swift in Sources */,

@@ -46,5 +46,9 @@ final class SignUpViewController: UIViewController {
         registerButton.rx.tap
             .bind { self.signUpViewModel.register() }
             .disposed(by: bag)
+
+        signUpViewModel.notifyUser
+            .bind { self.infoAlert(title: $0.0, message: $0.1) }
+            .disposed(by: bag)
     }
 }
