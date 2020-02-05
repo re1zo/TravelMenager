@@ -39,7 +39,7 @@
 		9168F4B523BBD3AC007EF2B3 /* Rx+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9168F4B423BBD3AC007EF2B3 /* Rx+ViewController.swift */; };
 		916FBE5B221DB90C00F43F01 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 916FBE5A221DB90C00F43F01 /* Settings.plist */; };
 		916FBE5E221DB97300F43F01 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916FBE5D221DB97300F43F01 /* Settings.swift */; };
-		9184EDD923DF695000352C0E /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9184EDD823DF695000352C0E /* String+Utils.swift */; };
+		9184EDD923DF695000352C0E /* String+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9184EDD823DF695000352C0E /* String+Style.swift */; };
 		91983929236323F60043BCA7 /* ShadowedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91983928236323F60043BCA7 /* ShadowedView.swift */; };
 		91AF4CCB23D3812A00F7FA34 /* Rx+BehaviorRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF4CCA23D3812A00F7FA34 /* Rx+BehaviorRelay.swift */; };
 		91AF4CCE23D3A12E00F7FA34 /* PlacesDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF4CCD23D3A12E00F7FA34 /* PlacesDatabaseService.swift */; };
@@ -120,7 +120,7 @@
 		9168F4B423BBD3AC007EF2B3 /* Rx+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+ViewController.swift"; sourceTree = "<group>"; };
 		916FBE5A221DB90C00F43F01 /* Settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		916FBE5D221DB97300F43F01 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		9184EDD823DF695000352C0E /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		9184EDD823DF695000352C0E /* String+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Style.swift"; sourceTree = "<group>"; };
 		91983928236323F60043BCA7 /* ShadowedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedView.swift; sourceTree = "<group>"; };
 		91AF4CCA23D3812A00F7FA34 /* Rx+BehaviorRelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+BehaviorRelay.swift"; sourceTree = "<group>"; };
 		91AF4CCD23D3A12E00F7FA34 /* PlacesDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesDatabaseService.swift; sourceTree = "<group>"; };
@@ -243,7 +243,7 @@
 		912AB05E222041490079BA75 /* Style */ = {
 			isa = PBXGroup;
 			children = (
-				9184EDD823DF695000352C0E /* String+Utils.swift */,
+				9184EDD823DF695000352C0E /* String+Style.swift */,
 				912AB05C2220412D0079BA75 /* UIView+Style.swift */,
 			);
 			path = Style;
@@ -675,7 +675,7 @@
 				9116B4E1221EEA3900DA5466 /* SettingsItem.swift in Sources */,
 				915E4EC42351E01E0070635E /* MyPlacesViewController.swift in Sources */,
 				91E28A5623CF462800471B3E /* SettingsCellViewModel.swift in Sources */,
-				9184EDD923DF695000352C0E /* String+Utils.swift in Sources */,
+				9184EDD923DF695000352C0E /* String+Style.swift in Sources */,
 				915098D223A045F800C8FD4B /* SignInCoordinator.swift in Sources */,
 				91373D8D23A0ECFD00CAEDCB /* SignUpCoordinator.swift in Sources */,
 				91B9D16922AFD37B006FC2AB /* SignUpViewController.swift in Sources */,
