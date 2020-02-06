@@ -15,7 +15,7 @@ final class SignInCoordinator: Coordinator {
 
     func start() {
         let signInViewController = UIStoryboard(name: "SignIn").instantiate(viewController: SignInViewController.self)
-        let signInViewModel = SignInViewModel(service: GoogleAuthorisationService())
+        let signInViewModel = SignInViewModel(service: GoogleAuthorizationService())
 
         signInViewModel.onSignIn
             .subscribe(onNext: { self.menu() })

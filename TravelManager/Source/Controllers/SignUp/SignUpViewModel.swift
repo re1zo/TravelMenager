@@ -3,7 +3,7 @@ import RxRelay
 
 final class SignUpViewModel {
 
-    let service: AuthorisationService
+    let service: AuthorizationService
 
     let email = BehaviorRelay(value: "")
     let password = BehaviorRelay(value: "")
@@ -12,7 +12,7 @@ final class SignUpViewModel {
 
     private let bag = DisposeBag()
 
-    init(service: AuthorisationService) {
+    init(service: AuthorizationService) {
         self.service = service
     }
 

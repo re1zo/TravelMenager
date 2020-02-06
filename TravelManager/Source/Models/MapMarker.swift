@@ -3,7 +3,6 @@ import GooglePlaces
 
 class MapMarker: Decodable {
 
-    let id: String
     let country: String
     let googleMarker: GMSMarker
 
@@ -15,8 +14,7 @@ class MapMarker: Decodable {
         case y
     }
 
-    init(id: String?, title: String?, country: String, x: Double, y: Double) {
-        self.id = id ?? ""
+    init(title: String?, country: String, x: Double, y: Double) {
         self.country = country
         let marker = GMSMarker()
         marker.title = title
@@ -26,7 +24,6 @@ class MapMarker: Decodable {
 
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = try values.decode(String.self, forKey: .id)
         country = try values.decode(String.self, forKey: .country)
         let marker = GMSMarker()
         marker.title = try values.decode(String.self, forKey: .title)
@@ -39,7 +36,6 @@ class MapMarker: Decodable {
 
     var data: [String: Any] {
         [
-            "id": id,
             "x": googleMarker.position.latitude,
             "y": googleMarker.position.longitude,
             "title": googleMarker.title ?? "",

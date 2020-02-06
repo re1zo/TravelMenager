@@ -39,9 +39,9 @@ final class MapViewModel {
             .disposed(by: bag)
     }
 
-    func createMarker(id: String?, title: String?, country: String, x: Double, y: Double) {
-        let marker = MapMarker(id: id, title: title, country: country, x: x, y: y)
-        markers.acceptAppending(marker)
+    func createMarker(title: String?, country: String, x: Double, y: Double) {
+        let marker = MapMarker(title: title, country: country, x: x, y: y)
+        markers.acceptAppending(MapMarker(title: title, country: country, x: x, y: y))
         selected.onNext(marker)
     }
 }

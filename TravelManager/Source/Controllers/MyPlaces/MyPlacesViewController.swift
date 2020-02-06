@@ -37,9 +37,6 @@ final class MyPlacesViewController: UIViewController, UICollectionViewDelegate {
                 viewModel.removePlace
                     .subscribe(onNext: {
                         self.myPlacesViewModel.remove(marker: marker)
-                        DispatchQueue.main.async {
-                            self.placesCollectionView.reloadData()
-                        }
                     })
                     .disposed(by: self.bag)
                 cell.viewModel = viewModel

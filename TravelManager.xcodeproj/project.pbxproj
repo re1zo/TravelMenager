@@ -29,11 +29,11 @@
 		913543A921A19E8600B929FC /* TravelManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913543A821A19E8600B929FC /* TravelManagerTests.swift */; };
 		91373D8D23A0ECFD00CAEDCB /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91373D8C23A0ECFD00CAEDCB /* SignUpCoordinator.swift */; };
 		913E57B223BB9E4E0084BA33 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E57B123BB9E4E0084BA33 /* SignUpViewModel.swift */; };
-		913F70B423BC0BC800ACDCDD /* GoogleAuthorisationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913F70B323BC0BC800ACDCDD /* GoogleAuthorisationService.swift */; };
+		913F70B423BC0BC800ACDCDD /* GoogleAuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913F70B323BC0BC800ACDCDD /* GoogleAuthorizationService.swift */; };
 		913F70B723BC159B00ACDCDD /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913F70B623BC159B00ACDCDD /* ApiError.swift */; };
-		915098CD23A0432700C8FD4B /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915098CC23A0432700C8FD4B /* MainCoordinator.swift */; };
+		915098CD23A0432700C8FD4B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915098CC23A0432700C8FD4B /* AppCoordinator.swift */; };
 		915098D223A045F800C8FD4B /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915098D123A045F800C8FD4B /* SignInCoordinator.swift */; };
-		9159CDAC23BD5C8600A1EF6E /* AuthorisationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159CDAB23BD5C8600A1EF6E /* AuthorisationService.swift */; };
+		9159CDAC23BD5C8600A1EF6E /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159CDAB23BD5C8600A1EF6E /* AuthorizationService.swift */; };
 		915E4EC22351E00C0070635E /* MyPlaces.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 915E4EC12351E00C0070635E /* MyPlaces.storyboard */; };
 		915E4EC42351E01E0070635E /* MyPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915E4EC32351E01E0070635E /* MyPlacesViewController.swift */; };
 		9168F4B523BBD3AC007EF2B3 /* Rx+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9168F4B423BBD3AC007EF2B3 /* Rx+ViewController.swift */; };
@@ -47,7 +47,6 @@
 		91AFDE10221ED926001B046A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91AFDE0F221ED926001B046A /* GoogleService-Info.plist */; };
 		91AFDE14221EDDD5001B046A /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91AFDE13221EDDD5001B046A /* SignIn.storyboard */; };
 		91AFDE16221EDDE9001B046A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AFDE15221EDDE9001B046A /* SignInViewController.swift */; };
-		91B9D16222AFCA18006FC2AB /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B9D16122AFCA18006FC2AB /* Services.swift */; };
 		91B9D16722AFD361006FC2AB /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B9D16622AFD361006FC2AB /* SignUp.storyboard */; };
 		91B9D16922AFD37B006FC2AB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B9D16822AFD37B006FC2AB /* SignUpViewController.swift */; };
 		91BDC0B723BE3AEA001742AA /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91BDC0B623BE3AEA001742AA /* Preferences.storyboard */; };
@@ -60,6 +59,7 @@
 		91C54665220DE75C008BA297 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C54664220DE75C008BA297 /* MapViewController.swift */; };
 		91D405C423521DF3008492E0 /* MyPlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D405C323521DF3008492E0 /* MyPlacesCell.swift */; };
 		91D405CC235225BB008492E0 /* MyPlacesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91D405CB235225BB008492E0 /* MyPlacesCell.xib */; };
+		91E0C47A23ED523F008FEBF0 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E0C47923ED523F008FEBF0 /* Service.swift */; };
 		91E28A5623CF462800471B3E /* SettingsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E28A5523CF462800471B3E /* SettingsCellViewModel.swift */; };
 		91EB4A7622AFD91B0022D8F9 /* Localization.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91EB4A7822AFD91B0022D8F9 /* Localization.plist */; };
 		91EB4A7B22AFD9370022D8F9 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EB4A7A22AFD9370022D8F9 /* Localization.swift */; };
@@ -68,6 +68,7 @@
 		91F31865239FD2D400A4D82D /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F31864239FD2D400A4D82D /* SignInViewModel.swift */; };
 		91F31867239FD5D600A4D82D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F31866239FD5D600A4D82D /* Coordinator.swift */; };
 		D50C66ED7A71C94A560DC589 /* Pods_TravelManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6112EA4A5BE2D783EA46C24E /* Pods_TravelManager.framework */; };
+		F739F43566A2CB5C561148F6 /* Pods_TravelManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73DEDF3A7378709D12D0F78D /* Pods_TravelManagerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 /* Begin PBXFileReference section */
 		58B37BD0F6005F08E8613B2A /* Pods-TravelManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelManager.release.xcconfig"; path = "Target Support Files/Pods-TravelManager/Pods-TravelManager.release.xcconfig"; sourceTree = "<group>"; };
 		6112EA4A5BE2D783EA46C24E /* Pods_TravelManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73DEDF3A7378709D12D0F78D /* Pods_TravelManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C4A3845020B4E42CD8047F3 /* Pods-TravelManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelManager.debug.xcconfig"; path = "Target Support Files/Pods-TravelManager/Pods-TravelManager.debug.xcconfig"; sourceTree = "<group>"; };
 		910633E523BF3AAC009151BE /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
 		910633E723BF3B00009151BE /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
@@ -110,11 +112,11 @@
 		913543AA21A19E8600B929FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91373D8C23A0ECFD00CAEDCB /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
 		913E57B123BB9E4E0084BA33 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		913F70B323BC0BC800ACDCDD /* GoogleAuthorisationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthorisationService.swift; sourceTree = "<group>"; };
+		913F70B323BC0BC800ACDCDD /* GoogleAuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthorizationService.swift; sourceTree = "<group>"; };
 		913F70B623BC159B00ACDCDD /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
-		915098CC23A0432700C8FD4B /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		915098CC23A0432700C8FD4B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		915098D123A045F800C8FD4B /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
-		9159CDAB23BD5C8600A1EF6E /* AuthorisationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorisationService.swift; sourceTree = "<group>"; };
+		9159CDAB23BD5C8600A1EF6E /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		915E4EC12351E00C0070635E /* MyPlaces.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPlaces.storyboard; sourceTree = "<group>"; };
 		915E4EC32351E01E0070635E /* MyPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlacesViewController.swift; sourceTree = "<group>"; };
 		9168F4B423BBD3AC007EF2B3 /* Rx+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+ViewController.swift"; sourceTree = "<group>"; };
@@ -128,7 +130,6 @@
 		91AFDE0F221ED926001B046A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91AFDE13221EDDD5001B046A /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		91AFDE15221EDDE9001B046A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		91B9D16122AFCA18006FC2AB /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		91B9D16622AFD361006FC2AB /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		91B9D16822AFD37B006FC2AB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		91BDC0B623BE3AEA001742AA /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
@@ -141,6 +142,7 @@
 		91C54664220DE75C008BA297 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		91D405C323521DF3008492E0 /* MyPlacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlacesCell.swift; sourceTree = "<group>"; };
 		91D405CB235225BB008492E0 /* MyPlacesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPlacesCell.xib; sourceTree = "<group>"; };
+		91E0C47923ED523F008FEBF0 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		91E28A5523CF462800471B3E /* SettingsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellViewModel.swift; sourceTree = "<group>"; };
 		91EB4A7722AFD91B0022D8F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Localization.plist; sourceTree = "<group>"; };
 		91EB4A7922AFD91F0022D8F9 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = pl; path = pl.lproj/Localization.plist; sourceTree = "<group>"; };
@@ -149,6 +151,8 @@
 		91EB4A7F22AFE36B0022D8F9 /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		91F31864239FD2D400A4D82D /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		91F31866239FD5D600A4D82D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9A1F81E9658D788E3958E30A /* Pods-TravelManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelManagerTests.debug.xcconfig"; path = "Target Support Files/Pods-TravelManagerTests/Pods-TravelManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A8EB4F2FEB06990E44A289EB /* Pods-TravelManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelManagerTests.release.xcconfig"; path = "Target Support Files/Pods-TravelManagerTests/Pods-TravelManagerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F739F43566A2CB5C561148F6 /* Pods_TravelManagerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				6112EA4A5BE2D783EA46C24E /* Pods_TravelManager.framework */,
+				73DEDF3A7378709D12D0F78D /* Pods_TravelManagerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -183,6 +189,8 @@
 			children = (
 				7C4A3845020B4E42CD8047F3 /* Pods-TravelManager.debug.xcconfig */,
 				58B37BD0F6005F08E8613B2A /* Pods-TravelManager.release.xcconfig */,
+				9A1F81E9658D788E3958E30A /* Pods-TravelManagerTests.debug.xcconfig */,
+				A8EB4F2FEB06990E44A289EB /* Pods-TravelManagerTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -341,8 +349,8 @@
 			isa = PBXGroup;
 			children = (
 				916FBE5D221DB97300F43F01 /* Settings.swift */,
-				91B9D16122AFCA18006FC2AB /* Services.swift */,
 				91EB4A7A22AFD9370022D8F9 /* Localization.swift */,
+				91E0C47923ED523F008FEBF0 /* Service.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -391,8 +399,8 @@
 		91BDC0BC23BE3CA3001742AA /* Authorisation */ = {
 			isa = PBXGroup;
 			children = (
-				9159CDAB23BD5C8600A1EF6E /* AuthorisationService.swift */,
-				913F70B323BC0BC800ACDCDD /* GoogleAuthorisationService.swift */,
+				9159CDAB23BD5C8600A1EF6E /* AuthorizationService.swift */,
+				913F70B323BC0BC800ACDCDD /* GoogleAuthorizationService.swift */,
 			);
 			path = Authorisation;
 			sourceTree = "<group>";
@@ -401,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				9135439321A19E8400B929FC /* AppDelegate.swift */,
+				915098CC23A0432700C8FD4B /* AppCoordinator.swift */,
 				912AB058222037BA0079BA75 /* Controllers */,
 				912AB05A222040F20079BA75 /* Views */,
 				912AB0552220377A0079BA75 /* Models */,
@@ -416,7 +425,6 @@
 		91C54651220DDCAE008BA297 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				915098CC23A0432700C8FD4B /* MainCoordinator.swift */,
 				9135439521A19E8400B929FC /* MainViewController.swift */,
 				9135439721A19E8400B929FC /* Main.storyboard */,
 			);
@@ -502,6 +510,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 913543B021A19E8600B929FC /* Build configuration list for PBXNativeTarget "TravelManagerTests" */;
 			buildPhases = (
+				E13B4D6A5C23F98B9F0C681A /* [CP] Check Pods Manifest.lock */,
 				913543A021A19E8600B929FC /* Sources */,
 				913543A121A19E8600B929FC /* Frameworks */,
 				913543A221A19E8600B929FC /* Resources */,
@@ -643,6 +652,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TravelManager/Pods-TravelManager-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E13B4D6A5C23F98B9F0C681A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TravelManagerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -658,7 +689,6 @@
 				91D405C423521DF3008492E0 /* MyPlacesCell.swift in Sources */,
 				91C0221323EA02B300640C05 /* UIViewController+Alert.swift in Sources */,
 				91AF4CCB23D3812A00F7FA34 /* Rx+BehaviorRelay.swift in Sources */,
-				91B9D16222AFCA18006FC2AB /* Services.swift in Sources */,
 				9133A6D423D4DDB7007778E4 /* MapMarker.swift in Sources */,
 				91F31867239FD5D600A4D82D /* Coordinator.swift in Sources */,
 				911D00072338E212000F076D /* StandardStyledUIButton.swift in Sources */,
@@ -671,7 +701,8 @@
 				9168F4B523BBD3AC007EF2B3 /* Rx+ViewController.swift in Sources */,
 				910633EA23BF3B95009151BE /* PreferencesCoordinator.swift in Sources */,
 				91C54663220DE672008BA297 /* SettingsViewController.swift in Sources */,
-				9159CDAC23BD5C8600A1EF6E /* AuthorisationService.swift in Sources */,
+				9159CDAC23BD5C8600A1EF6E /* AuthorizationService.swift in Sources */,
+				91E0C47A23ED523F008FEBF0 /* Service.swift in Sources */,
 				9116B4E1221EEA3900DA5466 /* SettingsItem.swift in Sources */,
 				915E4EC42351E01E0070635E /* MyPlacesViewController.swift in Sources */,
 				91E28A5623CF462800471B3E /* SettingsCellViewModel.swift in Sources */,
@@ -692,8 +723,8 @@
 				9116B4E4221EEB4900DA5466 /* SettingsTableViewCell.swift in Sources */,
 				9109AA1A23D09CEC00F58C2A /* MyPlacesCellViewModel.swift in Sources */,
 				9135439421A19E8400B929FC /* AppDelegate.swift in Sources */,
-				915098CD23A0432700C8FD4B /* MainCoordinator.swift in Sources */,
-				913F70B423BC0BC800ACDCDD /* GoogleAuthorisationService.swift in Sources */,
+				915098CD23A0432700C8FD4B /* AppCoordinator.swift in Sources */,
+				913F70B423BC0BC800ACDCDD /* GoogleAuthorizationService.swift in Sources */,
 				910633EE23BF45BC009151BE /* MyPlacesViewModel.swift in Sources */,
 				912AB05D2220412D0079BA75 /* UIView+Style.swift in Sources */,
 			);
@@ -798,7 +829,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -855,7 +886,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -904,6 +935,7 @@
 		};
 		913543B121A19E8600B929FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A1F81E9658D788E3958E30A /* Pods-TravelManagerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -924,6 +956,7 @@
 		};
 		913543B221A19E8600B929FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8EB4F2FEB06990E44A289EB /* Pods-TravelManagerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

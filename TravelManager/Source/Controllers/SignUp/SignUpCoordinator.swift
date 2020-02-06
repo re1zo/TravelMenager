@@ -22,7 +22,7 @@ final class SignUpCoordinator: Coordinator {
         })
             .disposed(by: bag)
 
-        let signUpViewModel = SignUpViewModel(service: GoogleAuthorisationService())
+        let signUpViewModel = SignUpViewModel(service: GoogleAuthorizationService())
         signUpViewModel.onRegister
             .subscribe(onCompleted: { self.back() })
             .disposed(by: bag)

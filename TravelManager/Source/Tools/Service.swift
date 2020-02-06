@@ -2,7 +2,7 @@ import Firebase
 import GoogleMaps
 import GooglePlaces
 
-final class Services {
+final class Service {
 
     func configure() {
         FirebaseApp.configure()

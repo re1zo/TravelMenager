@@ -59,7 +59,6 @@ extension MapViewController: GMSAutocompleteViewControllerDelegate {
     func viewController(_ controller: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         let country = place.addressComponents?.first(where: { $0.types.first == "country" })?.name ?? ""
         mapViewModel.createMarker(
-            id: place.placeID,
             title: place.name,
             country: country,
             x: place.coordinate.latitude,
@@ -74,13 +73,5 @@ extension MapViewController: GMSAutocompleteViewControllerDelegate {
 
     func wasCancelled(_ controller: GMSAutocompleteViewController) {
         controller.dismiss(animated: true, completion: nil)
-    }
-
-    func didRequestAutocompletePredictions(_: GMSAutocompleteViewController) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    }
-
-    func didUpdateAutocompletePredictions(_: GMSAutocompleteViewController) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 }

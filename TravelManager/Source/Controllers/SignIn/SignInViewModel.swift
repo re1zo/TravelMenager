@@ -3,7 +3,7 @@ import RxRelay
 
 final class SignInViewModel {
 
-    let service: AuthorisationService
+    let service: AuthorizationService
 
     let onSignIn = PublishSubject<Void>()
     let onSingUp = PublishSubject<Void>()
@@ -14,7 +14,7 @@ final class SignInViewModel {
 
     private let bag = DisposeBag()
 
-    init(service: AuthorisationService) {
+    init(service: AuthorizationService) {
         self.service = service
     }
 

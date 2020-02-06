@@ -1,7 +1,7 @@
 import UIKit
 import RxSwift
 
-final class MainCoordinator: Coordinator {
+final class AppCoordinator: Coordinator {
 
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []

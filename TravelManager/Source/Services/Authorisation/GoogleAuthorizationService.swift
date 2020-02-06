@@ -1,7 +1,7 @@
 import RxSwift
 import Firebase
 
-final class GoogleAuthorisationService: AuthorisationService {
+final class GoogleAuthorizationService: AuthorizationService {
 
     func signIn(email: String, password: String) -> Single<AppUser> {
         Single<AppUser>.create { single in
@@ -12,7 +12,7 @@ final class GoogleAuthorisationService: AuthorisationService {
                 }
 
                 guard let _ = userInfo else {
-                    single(.error(ApiError.dataError))
+                    single(.error(ApiError.userNotFoundError))
                     return
                 }
                 single(.success(AppUser()))
@@ -29,11 +29,11 @@ final class GoogleAuthorisationService: AuthorisationService {
                     return
                 }
                 guard let _ = user else {
-                    single(.error(ApiError.dataError))
+                    single(.error(ApiError.userNotFoundError))
                     return
                 }
                 try? Auth.auth().signOut()
-                single(.success("USER REGIESTRED"))
+                single(.success("User regiestred."))
             }
             return Disposables.create()
         }
