@@ -38,7 +38,7 @@ final class MyPlacesViewController: UIViewController, UICollectionViewDelegate {
                     .subscribe(onNext: {
                         self.myPlacesViewModel.remove(marker: marker)
                     })
-                    .disposed(by: self.bag)
+                    .disposed(by: cell.bag)
                 cell.viewModel = viewModel
             }
             .disposed(by: bag)

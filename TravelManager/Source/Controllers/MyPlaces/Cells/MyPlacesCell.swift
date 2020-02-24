@@ -16,7 +16,7 @@ final class MyPlacesCell: UICollectionViewCell {
         }
     }
 
-    private let bag = DisposeBag()
+    let bag = DisposeBag()
 
     override func awakeFromNib() {
         super.awakeFromNib()

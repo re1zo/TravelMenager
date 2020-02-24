@@ -11,7 +11,7 @@ final class FirebasePlacesService: PlacesDatabaseService {
                 return Disposables.create()
             }
             let database = Database.database().reference()
-            let data = places.map { $0.data }
+            let data = places.map(\.data)
             database.child("users/\(userID)/places").setValue(data)
             single(.success(()))
             return Disposables.create()
