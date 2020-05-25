@@ -4,9 +4,14 @@ travel-manager-ios is a simple app to demonstrate usage of iOS developing concep
 By using Google Maps Api you can add places witch you want visit and store them in your own profile.
 
 ## Overview
-![login](Images/login.gif)
-![add-place](Images/add-place.gif)
-![remove-place](Images/remove-place.gif)
+
+<p align="center">
+<table><tr>
+ <td><img src="Images/login.gif" alt="Login"/></td>
+ <td><img src="Images/add-place.gif" alt="Add place"/></td>
+ <td><img src="Images/remove-place.gif" alt="Remove place"/></td>
+</tr></table>
+</p>
 
 ## Installation
 
