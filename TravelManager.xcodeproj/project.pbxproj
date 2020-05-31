@@ -31,7 +31,8 @@
 		913E57B223BB9E4E0084BA33 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E57B123BB9E4E0084BA33 /* SignUpViewModel.swift */; };
 		913F70B423BC0BC800ACDCDD /* GoogleAuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913F70B323BC0BC800ACDCDD /* GoogleAuthorizationService.swift */; };
 		913F70B723BC159B00ACDCDD /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913F70B623BC159B00ACDCDD /* ApiError.swift */; };
-		915098CD23A0432700C8FD4B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915098CC23A0432700C8FD4B /* AppCoordinator.swift */; };
+		91499C6C2483D73700AD3AE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91499C6B2483D73700AD3AE0 /* SceneDelegate.swift */; };
+		915098CD23A0432700C8FD4B /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915098CC23A0432700C8FD4B /* SceneCoordinator.swift */; };
 		915098D223A045F800C8FD4B /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915098D123A045F800C8FD4B /* SignInCoordinator.swift */; };
 		9159CDAC23BD5C8600A1EF6E /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159CDAB23BD5C8600A1EF6E /* AuthorizationService.swift */; };
 		915E4EC22351E00C0070635E /* MyPlaces.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 915E4EC12351E00C0070635E /* MyPlaces.storyboard */; };
@@ -114,7 +115,8 @@
 		913E57B123BB9E4E0084BA33 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		913F70B323BC0BC800ACDCDD /* GoogleAuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthorizationService.swift; sourceTree = "<group>"; };
 		913F70B623BC159B00ACDCDD /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
-		915098CC23A0432700C8FD4B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		91499C6B2483D73700AD3AE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; tabWidth = 4; };
+		915098CC23A0432700C8FD4B /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
 		915098D123A045F800C8FD4B /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
 		9159CDAB23BD5C8600A1EF6E /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		915E4EC12351E00C0070635E /* MyPlaces.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPlaces.storyboard; sourceTree = "<group>"; };
@@ -409,7 +411,8 @@
 			isa = PBXGroup;
 			children = (
 				9135439321A19E8400B929FC /* AppDelegate.swift */,
-				915098CC23A0432700C8FD4B /* AppCoordinator.swift */,
+				91499C6B2483D73700AD3AE0 /* SceneDelegate.swift */,
+				915098CC23A0432700C8FD4B /* SceneCoordinator.swift */,
 				912AB058222037BA0079BA75 /* Controllers */,
 				912AB05A222040F20079BA75 /* Views */,
 				912AB0552220377A0079BA75 /* Models */,
@@ -720,10 +723,11 @@
 				910633F023BF7855009151BE /* MapViewModel.swift in Sources */,
 				91EB4A8022AFE36B0022D8F9 /* AppUser.swift in Sources */,
 				91F31865239FD2D400A4D82D /* SignInViewModel.swift in Sources */,
+				91499C6C2483D73700AD3AE0 /* SceneDelegate.swift in Sources */,
 				9116B4E4221EEB4900DA5466 /* SettingsTableViewCell.swift in Sources */,
 				9109AA1A23D09CEC00F58C2A /* MyPlacesCellViewModel.swift in Sources */,
 				9135439421A19E8400B929FC /* AppDelegate.swift in Sources */,
-				915098CD23A0432700C8FD4B /* AppCoordinator.swift in Sources */,
+				915098CD23A0432700C8FD4B /* SceneCoordinator.swift in Sources */,
 				913F70B423BC0BC800ACDCDD /* GoogleAuthorizationService.swift in Sources */,
 				910633EE23BF45BC009151BE /* MyPlacesViewModel.swift in Sources */,
 				912AB05D2220412D0079BA75 /* UIView+Style.swift in Sources */,
