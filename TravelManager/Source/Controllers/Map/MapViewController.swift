@@ -24,7 +24,7 @@ final class MapViewController: UIViewController {
         updateMapStyle()
         bindUI()
     }
-    
+
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         updateMapStyle()
@@ -56,10 +56,10 @@ final class MapViewController: UIViewController {
         googleMapsView.selectedMarker = marker
         googleMapsView.animate(toLocation: marker.position)
     }
-    
+
     private func updateMapStyle() {
-        if traitCollection.userInterfaceStyle == .dark ,
-            let styleURL = Bundle.main.url(forResource: "mapNightTheme", withExtension: "json"),
+        if traitCollection.userInterfaceStyle == .dark,
+            let styleURL = Bundle.main.url(forResource: "MapNightTheme", withExtension: "json"),
             let style = try? GMSMapStyle(contentsOfFileURL: styleURL) {
             googleMapsView.mapStyle = style
         } else {

@@ -2,7 +2,79 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>test</key>
-	<string>test</string>
+	<key>ui</key>
+	<dict>
+		<key>signIn</key>
+		<dict>
+			<key>login</key>
+			<string>Sign In</string>
+			<key>regiester</key>
+			<string>Regiester</string>
+			<key>testAccount</key>
+			<string>Test  account</string>
+		</dict>
+		<key>signUp</key>
+		<dict>
+			<key>title</key>
+			<string>Registration</string>
+			<key>mainTitle</key>
+			<string>Create account</string>
+			<key>description</key>
+			<string>To track your favourtie places!</string>
+			<key>regiester</key>
+			<string>Regiester</string>
+			<key>succes</key>
+			<string>Sucess</string>
+			<key>error</key>
+			<string>Error</string>
+		</dict>
+		<key>menu</key>
+		<dict>
+			<key>map</key>
+			<string>Map</string>
+			<key>settings</key>
+			<string>Settings</string>
+		</dict>
+		<key>map</key>
+		<dict>
+			<key>title</key>
+			<string>Places</string>
+			<key>myPlaces</key>
+			<string>My Places</string>
+		</dict>
+		<key>settings</key>
+		<dict>
+			<key>title</key>
+			<string>Settings</string>
+			<key>username</key>
+			<string>Username:</string>
+			<key>preferences</key>
+			<string>Preferences</string>
+			<key>logout</key>
+			<string>Logout</string>
+		</dict>
+		<key>preferences</key>
+		<dict>
+			<key>title</key>
+			<string>Preferences</string>
+			<key>language</key>
+			<string>Language</string>
+			<key>english</key>
+			<string>English</string>
+			<key>polish</key>
+			<string>Polish</string>
+		</dict>
+		<key>common</key>
+		<dict>
+			<key>currentLangauge</key>
+			<string>English</string>
+			<key>errorTitle</key>
+			<string>Error</string>
+			<key>email</key>
+			<string>Email</string>
+			<key>password</key>
+			<string>Password</string>
+		</dict>
+	</dict>
 </dict>
 </plist>
