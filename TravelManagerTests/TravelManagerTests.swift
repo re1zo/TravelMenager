@@ -4,15 +4,9 @@ import XCTest
 
 class TravelManagerTests: XCTestCase {
 
-    override func setUp() {
+    override func setUp() {}
 
-    }
+    override func tearDown() {}
 
-    override func tearDown() {
-
-    }
-
-    func testExample() {
-        
-    }
+    func testExample() {}
 }

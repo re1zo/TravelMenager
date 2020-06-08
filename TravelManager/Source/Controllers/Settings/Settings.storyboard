@@ -36,6 +36,9 @@
                                         <rect key="frame" x="154.5" y="170" width="66" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="l10nText" value="ui.settings.username"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -125,6 +128,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="Zfq-XC-K5m"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="l10nTapBarTitle" value="ui.settings.title"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="settingsTableView" destination="Jqj-bN-RTX" id="QGg-hE-vN4"/>
                         <outlet property="usernameLabel" destination="rPx-Pe-pb5" id="JFb-IV-9XN"/>

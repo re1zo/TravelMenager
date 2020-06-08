@@ -37,10 +37,14 @@
 		9159CDAC23BD5C8600A1EF6E /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159CDAB23BD5C8600A1EF6E /* AuthorizationService.swift */; };
 		915E4EC22351E00C0070635E /* MyPlaces.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 915E4EC12351E00C0070635E /* MyPlaces.storyboard */; };
 		915E4EC42351E01E0070635E /* MyPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915E4EC32351E01E0070635E /* MyPlacesViewController.swift */; };
+		91628B5A248EA05700A038EB /* UILabel+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91628B59248EA05700A038EB /* UILabel+Localization.swift */; };
+		91628B5C248EA21200A038EB /* UITextfield+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91628B5B248EA21200A038EB /* UITextfield+Localization.swift */; };
+		91628B5E248EA30E00A038EB /* UIButton+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91628B5D248EA30E00A038EB /* UIButton+Localization.swift */; };
+		91628B60248EAA5000A038EB /* UIViewController+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91628B5F248EAA5000A038EB /* UIViewController+Localization.swift */; };
 		9168F4B523BBD3AC007EF2B3 /* Rx+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9168F4B423BBD3AC007EF2B3 /* Rx+ViewController.swift */; };
 		916FBE5B221DB90C00F43F01 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 916FBE5A221DB90C00F43F01 /* Settings.plist */; };
 		916FBE5E221DB97300F43F01 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916FBE5D221DB97300F43F01 /* Settings.swift */; };
-		917FB286248E590D0001A611 /* mapNightTheme.json in Resources */ = {isa = PBXBuildFile; fileRef = 917FB285248E590D0001A611 /* mapNightTheme.json */; };
+		917FB286248E590D0001A611 /* MapNightTheme.json in Resources */ = {isa = PBXBuildFile; fileRef = 917FB285248E590D0001A611 /* MapNightTheme.json */; };
 		9184EDD923DF695000352C0E /* String+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9184EDD823DF695000352C0E /* String+Style.swift */; };
 		91983929236323F60043BCA7 /* ShadowedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91983928236323F60043BCA7 /* ShadowedView.swift */; };
 		91AF4CCB23D3812A00F7FA34 /* Rx+BehaviorRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF4CCA23D3812A00F7FA34 /* Rx+BehaviorRelay.swift */; };
@@ -122,10 +126,14 @@
 		9159CDAB23BD5C8600A1EF6E /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		915E4EC12351E00C0070635E /* MyPlaces.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPlaces.storyboard; sourceTree = "<group>"; };
 		915E4EC32351E01E0070635E /* MyPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlacesViewController.swift; sourceTree = "<group>"; };
+		91628B59248EA05700A038EB /* UILabel+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Localization.swift"; sourceTree = "<group>"; };
+		91628B5B248EA21200A038EB /* UITextfield+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Localization.swift"; sourceTree = "<group>"; };
+		91628B5D248EA30E00A038EB /* UIButton+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Localization.swift"; sourceTree = "<group>"; };
+		91628B5F248EAA5000A038EB /* UIViewController+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Localization.swift"; sourceTree = "<group>"; };
 		9168F4B423BBD3AC007EF2B3 /* Rx+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+ViewController.swift"; sourceTree = "<group>"; };
 		916FBE5A221DB90C00F43F01 /* Settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		916FBE5D221DB97300F43F01 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		917FB285248E590D0001A611 /* mapNightTheme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = mapNightTheme.json; path = TravelManager/mapNightTheme.json; sourceTree = SOURCE_ROOT; };
+		917FB285248E590D0001A611 /* MapNightTheme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MapNightTheme.json; path = TravelManager/MapNightTheme.json; sourceTree = SOURCE_ROOT; };
 		9184EDD823DF695000352C0E /* String+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Style.swift"; sourceTree = "<group>"; };
 		91983928236323F60043BCA7 /* ShadowedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedView.swift; sourceTree = "<group>"; };
 		91AF4CCA23D3812A00F7FA34 /* Rx+BehaviorRelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+BehaviorRelay.swift"; sourceTree = "<group>"; };
@@ -287,9 +295,9 @@
 				91C54650220DDCAE008BA297 /* Source */,
 				9135439A21A19E8500B929FC /* Assets.xcassets */,
 				916FBE5A221DB90C00F43F01 /* Settings.plist */,
-				917FB285248E590D0001A611 /* mapNightTheme.json */,
 				91AFDE0F221ED926001B046A /* GoogleService-Info.plist */,
 				9135439F21A19E8500B929FC /* Info.plist */,
+				917FB285248E590D0001A611 /* MapNightTheme.json */,
 				91EB4A7822AFD91B0022D8F9 /* Localization.plist */,
 			);
 			path = TravelManager;
@@ -339,6 +347,18 @@
 				915E4EC12351E00C0070635E /* MyPlaces.storyboard */,
 			);
 			path = MyPlaces;
+			sourceTree = "<group>";
+		};
+		91628B58248EA03900A038EB /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				91EB4A7D22AFDABF0022D8F9 /* String+Localization.swift */,
+				91628B59248EA05700A038EB /* UILabel+Localization.swift */,
+				91628B5B248EA21200A038EB /* UITextfield+Localization.swift */,
+				91628B5D248EA30E00A038EB /* UIButton+Localization.swift */,
+				91628B5F248EAA5000A038EB /* UIViewController+Localization.swift */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		9168F4B623BBD8C2007EF2B3 /* Rx */ = {
@@ -461,8 +481,8 @@
 			children = (
 				9109AA2123D10ED900F58C2A /* UI */,
 				9168F4B623BBD8C2007EF2B3 /* Rx */,
+				91628B58248EA03900A038EB /* Localization */,
 				912AB05E222041490079BA75 /* Style */,
-				91EB4A7D22AFDABF0022D8F9 /* String+Localization.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -585,7 +605,7 @@
 				91AFDE14221EDDD5001B046A /* SignIn.storyboard in Resources */,
 				91BDC0B723BE3AEA001742AA /* Preferences.storyboard in Resources */,
 				91C54661220DE65B008BA297 /* Settings.storyboard in Resources */,
-				917FB286248E590D0001A611 /* mapNightTheme.json in Resources */,
+				917FB286248E590D0001A611 /* MapNightTheme.json in Resources */,
 				91D405CC235225BB008492E0 /* MyPlacesCell.xib in Resources */,
 				916FBE5B221DB90C00F43F01 /* Settings.plist in Resources */,
 				91EB4A7622AFD91B0022D8F9 /* Localization.plist in Resources */,
@@ -702,7 +722,9 @@
 				91AF4CCE23D3A12E00F7FA34 /* PlacesDatabaseService.swift in Sources */,
 				91AFDE16221EDDE9001B046A /* SignInViewController.swift in Sources */,
 				91983929236323F60043BCA7 /* ShadowedView.swift in Sources */,
+				91628B5C248EA21200A038EB /* UITextfield+Localization.swift in Sources */,
 				910633E823BF3B00009151BE /* SettingsCoordinator.swift in Sources */,
+				91628B5E248EA30E00A038EB /* UIButton+Localization.swift in Sources */,
 				916FBE5E221DB97300F43F01 /* Settings.swift in Sources */,
 				9109AA2023D10D0400F58C2A /* UIStoryboard+Utils.swift in Sources */,
 				9168F4B523BBD3AC007EF2B3 /* Rx+ViewController.swift in Sources */,
@@ -711,6 +733,7 @@
 				9159CDAC23BD5C8600A1EF6E /* AuthorizationService.swift in Sources */,
 				91E0C47A23ED523F008FEBF0 /* Service.swift in Sources */,
 				9116B4E1221EEA3900DA5466 /* SettingsItem.swift in Sources */,
+				91628B5A248EA05700A038EB /* UILabel+Localization.swift in Sources */,
 				915E4EC42351E01E0070635E /* MyPlacesViewController.swift in Sources */,
 				91E28A5623CF462800471B3E /* SettingsCellViewModel.swift in Sources */,
 				9184EDD923DF695000352C0E /* String+Style.swift in Sources */,
@@ -722,6 +745,7 @@
 				91BDC0BB23BE3B1A001742AA /* PreferencesViewController.swift in Sources */,
 				913E57B223BB9E4E0084BA33 /* SignUpViewModel.swift in Sources */,
 				912AB054222037490079BA75 /* SettingsViewModel.swift in Sources */,
+				91628B60248EAA5000A038EB /* UIViewController+Localization.swift in Sources */,
 				910633EC23BF3F21009151BE /* MyPlacesCoordinator.swift in Sources */,
 				91AF4CD023D3A1A200F7FA34 /* FirebasePlacesService.swift in Sources */,
 				910633F023BF7855009151BE /* MapViewModel.swift in Sources */,

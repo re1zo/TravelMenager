@@ -6,7 +6,7 @@ enum ApiError: Error {
 }
 
 extension ApiError: LocalizedError {
-     
+
     var errorDescription: String? {
         switch self {
         case .userNotFoundError:
