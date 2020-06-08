@@ -40,6 +40,7 @@
 		9168F4B523BBD3AC007EF2B3 /* Rx+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9168F4B423BBD3AC007EF2B3 /* Rx+ViewController.swift */; };
 		916FBE5B221DB90C00F43F01 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 916FBE5A221DB90C00F43F01 /* Settings.plist */; };
 		916FBE5E221DB97300F43F01 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916FBE5D221DB97300F43F01 /* Settings.swift */; };
+		917FB286248E590D0001A611 /* mapNightTheme.json in Resources */ = {isa = PBXBuildFile; fileRef = 917FB285248E590D0001A611 /* mapNightTheme.json */; };
 		9184EDD923DF695000352C0E /* String+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9184EDD823DF695000352C0E /* String+Style.swift */; };
 		91983929236323F60043BCA7 /* ShadowedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91983928236323F60043BCA7 /* ShadowedView.swift */; };
 		91AF4CCB23D3812A00F7FA34 /* Rx+BehaviorRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF4CCA23D3812A00F7FA34 /* Rx+BehaviorRelay.swift */; };
@@ -124,6 +125,7 @@
 		9168F4B423BBD3AC007EF2B3 /* Rx+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+ViewController.swift"; sourceTree = "<group>"; };
 		916FBE5A221DB90C00F43F01 /* Settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		916FBE5D221DB97300F43F01 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		917FB285248E590D0001A611 /* mapNightTheme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = mapNightTheme.json; path = TravelManager/mapNightTheme.json; sourceTree = SOURCE_ROOT; };
 		9184EDD823DF695000352C0E /* String+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Style.swift"; sourceTree = "<group>"; };
 		91983928236323F60043BCA7 /* ShadowedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedView.swift; sourceTree = "<group>"; };
 		91AF4CCA23D3812A00F7FA34 /* Rx+BehaviorRelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+BehaviorRelay.swift"; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				91C54650220DDCAE008BA297 /* Source */,
 				9135439A21A19E8500B929FC /* Assets.xcassets */,
 				916FBE5A221DB90C00F43F01 /* Settings.plist */,
+				917FB285248E590D0001A611 /* mapNightTheme.json */,
 				91AFDE0F221ED926001B046A /* GoogleService-Info.plist */,
 				9135439F21A19E8500B929FC /* Info.plist */,
 				91EB4A7822AFD91B0022D8F9 /* Localization.plist */,
@@ -582,6 +585,7 @@
 				91AFDE14221EDDD5001B046A /* SignIn.storyboard in Resources */,
 				91BDC0B723BE3AEA001742AA /* Preferences.storyboard in Resources */,
 				91C54661220DE65B008BA297 /* Settings.storyboard in Resources */,
+				917FB286248E590D0001A611 /* mapNightTheme.json in Resources */,
 				91D405CC235225BB008492E0 /* MyPlacesCell.xib in Resources */,
 				916FBE5B221DB90C00F43F01 /* Settings.plist in Resources */,
 				91EB4A7622AFD91B0022D8F9 /* Localization.plist in Resources */,

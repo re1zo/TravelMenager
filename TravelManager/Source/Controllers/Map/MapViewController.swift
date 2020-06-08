@@ -21,10 +21,16 @@ final class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateMapStyle()
         bindUI()
     }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        updateMapStyle()
+    }
 
-    func bindUI() {
+    private func bindUI() {
         addPlaceButton.rx.tap
             .bind(to: mapViewModel.onFindPlaces)
             .disposed(by: bag)
@@ -49,6 +55,16 @@ final class MapViewController: UIViewController {
     private func select(marker: GMSMarker) {
         googleMapsView.selectedMarker = marker
         googleMapsView.animate(toLocation: marker.position)
+    }
+    
+    private func updateMapStyle() {
+        if traitCollection.userInterfaceStyle == .dark ,
+            let styleURL = Bundle.main.url(forResource: "mapNightTheme", withExtension: "json"),
+            let style = try? GMSMapStyle(contentsOfFileURL: styleURL) {
+            googleMapsView.mapStyle = style
+        } else {
+            googleMapsView.mapStyle = nil
+        }
     }
 }
 

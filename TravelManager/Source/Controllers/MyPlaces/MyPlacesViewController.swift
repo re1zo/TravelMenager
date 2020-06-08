@@ -22,7 +22,7 @@ final class MyPlacesViewController: UIViewController, UICollectionViewDelegate {
         bindUI()
     }
 
-    func bindUI() {
+    private func bindUI() {
         closeButton.rx.tap
             .bind(to: myPlacesViewModel.onUsedPlaces)
             .disposed(by: bag)

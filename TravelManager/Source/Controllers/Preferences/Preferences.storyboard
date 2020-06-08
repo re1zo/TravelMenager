@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,36 +18,20 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!TODO: Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rz7-rO-Tgk">
                                 <rect key="frame" x="25" y="69" width="164" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jz3-xo-lVF">
                                 <rect key="frame" x="339" y="66" width="50" height="30"/>
                                 <state key="normal" title="English"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!TODO: Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIa-kp-4pg">
-                                <rect key="frame" x="25" y="118" width="136.5" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fH-DM-oNP">
-                                <rect key="frame" x="354" y="115" width="35" height="30"/>
-                                <state key="normal" title="Light"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="4fH-DM-oNP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wIa-kp-4pg" secondAttribute="trailing" constant="25" id="2QV-YG-dxh"/>
                             <constraint firstItem="Jz3-xo-lVF" firstAttribute="centerY" secondItem="rz7-rO-Tgk" secondAttribute="centerY" id="5AB-s7-Rka"/>
-                            <constraint firstItem="wIa-kp-4pg" firstAttribute="top" secondItem="rz7-rO-Tgk" secondAttribute="bottom" constant="25" id="AjE-J8-vuj"/>
-                            <constraint firstItem="uD3-o0-5gW" firstAttribute="trailing" secondItem="4fH-DM-oNP" secondAttribute="trailing" constant="25" id="QI8-gO-3R7"/>
-                            <constraint firstItem="wIa-kp-4pg" firstAttribute="leading" secondItem="uD3-o0-5gW" secondAttribute="leading" constant="25" id="Qdz-vl-phR"/>
                             <constraint firstItem="rz7-rO-Tgk" firstAttribute="leading" secondItem="uD3-o0-5gW" secondAttribute="leading" constant="25" id="U8b-3K-sfr"/>
                             <constraint firstItem="Jz3-xo-lVF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rz7-rO-Tgk" secondAttribute="trailing" constant="25" id="WaG-cv-Hph"/>
                             <constraint firstItem="rz7-rO-Tgk" firstAttribute="top" secondItem="uD3-o0-5gW" secondAttribute="top" constant="25" id="Y8N-Wv-xUG"/>
                             <constraint firstItem="uD3-o0-5gW" firstAttribute="trailing" secondItem="Jz3-xo-lVF" secondAttribute="trailing" constant="25" id="h68-gN-8nd"/>
-                            <constraint firstItem="4fH-DM-oNP" firstAttribute="centerY" secondItem="wIa-kp-4pg" secondAttribute="centerY" id="tbJ-w3-KaJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uD3-o0-5gW"/>
                     </view>
