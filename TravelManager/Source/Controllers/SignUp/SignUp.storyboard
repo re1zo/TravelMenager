@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jiO-WN-HvZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--!TODO Register title-->
+        <scene sceneID="0cc-0O-dZn">
+            <objects>
+                <viewController storyboardIdentifier="SignUpViewController" title="!TODO Register title" id="jiO-WN-HvZ" customClass="SignUpViewController" customModule="TravelManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x6J-do-4ZO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M7b-LP-Tf4" userLabel="Password Text Field">
+                                <rect key="frame" x="25" y="273.5" width="364" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="l10nPlaceholder" value="ui.common.password"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FS4-Rk-QoM" userLabel="Login Text Field">
+                                <rect key="frame" x="25" y="214.5" width="364" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="username"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="l10nPlaceholder" value="ui.common.email"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3S8-1d-o9e" customClass="StandardStyledUIButton" customModule="TravelManager" customModuleProvider="target">
+                                <rect key="frame" x="25" y="332.5" width="364" height="60"/>
+                                <color key="backgroundColor" red="0.68235294117647061" green="0.74117647058823533" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="fMm-Vo-CpP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Register"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="l10nText" value="ui.signUp.regiester"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3M-Ty-UpF">
+                                <rect key="frame" x="115" y="104" width="184" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.74117647060000003" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="l10nText" value="ui.signUp.mainTitle"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To track your favourtie places!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3N-uw-xHm">
+                                <rect key="frame" x="109.5" y="147.5" width="195.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.74117647060000003" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="l10nText" value="ui.signUp.description"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3S8-1d-o9e" firstAttribute="leading" secondItem="bEA-w1-ieZ" secondAttribute="leading" constant="25" id="001-6I-VRS"/>
+                            <constraint firstItem="bEA-w1-ieZ" firstAttribute="trailing" secondItem="FS4-Rk-QoM" secondAttribute="trailing" constant="25" id="3Vh-1L-J2h"/>
+                            <constraint firstItem="FS4-Rk-QoM" firstAttribute="top" secondItem="W3N-uw-xHm" secondAttribute="bottom" constant="50" id="6Fa-g1-fMG"/>
+                            <constraint firstItem="FS4-Rk-QoM" firstAttribute="centerX" secondItem="bEA-w1-ieZ" secondAttribute="centerX" id="Aa3-mg-INb"/>
+                            <constraint firstItem="M7b-LP-Tf4" firstAttribute="centerX" secondItem="bEA-w1-ieZ" secondAttribute="centerX" id="Aqz-JH-FFy"/>
+                            <constraint firstItem="M7b-LP-Tf4" firstAttribute="top" secondItem="FS4-Rk-QoM" secondAttribute="bottom" constant="25" id="G6k-5Z-KcO"/>
+                            <constraint firstItem="W3N-uw-xHm" firstAttribute="top" secondItem="G3M-Ty-UpF" secondAttribute="bottom" constant="10" id="Zfc-Yj-cOR"/>
+                            <constraint firstItem="3S8-1d-o9e" firstAttribute="top" secondItem="M7b-LP-Tf4" secondAttribute="bottom" constant="25" id="dgq-m3-KFc"/>
+                            <constraint firstItem="bEA-w1-ieZ" firstAttribute="trailing" secondItem="3S8-1d-o9e" secondAttribute="trailing" constant="25" id="iZw-wH-nKK"/>
+                            <constraint firstItem="W3N-uw-xHm" firstAttribute="centerX" secondItem="G3M-Ty-UpF" secondAttribute="centerX" id="o0c-DM-Zm0"/>
+                            <constraint firstItem="bEA-w1-ieZ" firstAttribute="trailing" secondItem="M7b-LP-Tf4" secondAttribute="trailing" constant="25" id="q8C-Oh-qmU"/>
+                            <constraint firstItem="G3M-Ty-UpF" firstAttribute="centerX" secondItem="bEA-w1-ieZ" secondAttribute="centerX" id="ulY-YG-xO0"/>
+                            <constraint firstItem="G3M-Ty-UpF" firstAttribute="top" secondItem="bEA-w1-ieZ" secondAttribute="top" constant="60" id="vVL-NU-dgO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bEA-w1-ieZ"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="l10nTitle" value="ui.signUp.title"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="emailTextField" destination="FS4-Rk-QoM" id="XNo-cP-4WM"/>
+                        <outlet property="passwordTextField" destination="M7b-LP-Tf4" id="Fsq-pE-vw5"/>
+                        <outlet property="registerButton" destination="3S8-1d-o9e" id="vA1-Cv-HeF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4KR-i1-M4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="116"/>
+        </scene>
+    </scenes>
+</document>

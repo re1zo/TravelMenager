@@ -1,15 +1,15 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
-
 target 'TravelManager' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for TravelManager
-
-  target 'TravelManagerTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+    platform :ios, '13.0'
+    use_frameworks!
+    
+    pod 'RxSwift', '~> 5'
+    pod 'RxCocoa', '~> 5'
+    pod 'FirebaseUI/Auth', '~> 8.0'
+    pod 'FirebaseUI/Database', '~> 8.0'
+    pod 'GoogleMaps', '~> 3.7'
+    pod 'GooglePlaces', '~> 3.7'
+    
+    target 'TravelManagerTests' do
+      inherit! :search_paths
+    end
 end
